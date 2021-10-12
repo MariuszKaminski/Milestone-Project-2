@@ -30,3 +30,46 @@ body {
     margin-right: auto;
     padding: 1%;
 }
+
+.question-area {
+    width: 70%;
+    font-size: 2rem;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.score-area {
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+.controls-area {
+    width: 85%;
+    margin: 30px auto;
+}
+
+#correct {
+    color: green;
+    font-weight: bold;
+}
+
+#incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+/* --------- Buttons */
+
+.game-btn {
+    width: 110px;
+    height: 60px;
+    margin: 10px;
+    font-family: "Ubuntu", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: black;
+}
+.submit {
+    width: 150px;
+}
