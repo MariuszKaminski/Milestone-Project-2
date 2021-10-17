@@ -1,7 +1,7 @@
 
 
 
-document.addEventListener("DOMConentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
@@ -10,11 +10,11 @@ document.addEventListener("DOMConentLoaded", function() {
                 alert("You clicked Submit!");
             } else {
                 let gameType = this.getAttribute("data-type");
-                alert(`You clicked $(gameType)`);
+                alert(`You clicked ${gameType}`);
             }
-        })
+        });
     }
-})
+});
 
 function runGame() {
 
