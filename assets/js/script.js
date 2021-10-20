@@ -16,6 +16,33 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+let countries = [
+    {
+        name: 'France',
+        capital: 'Paris',
+        river: 'Loire',
+        mountain: 'Mont Blanc'
+    },
+    {
+        name: 'Germany',
+        capital: 'Berlin',
+        river: 'Rhine',
+        mountain: 'Zugspitze'
+    },
+    {
+        name: 'Spain',
+        capital: 'Madrid',
+        river: 'Tagus',
+        mountain: 'Pico del Teide',
+    },
+    {
+        name: 'Italy',
+        capital: 'Rome',
+        river: 'Po',
+        mountain: 'Monte Bianco'
+    }
+]
+
 function runGame() {
 
 }
