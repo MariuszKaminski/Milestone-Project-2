@@ -1,21 +1,3 @@
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("You clicked Submit!");
-            } else {
-                let gameType = this.getAttribute("data-type");
-                alert(`You clicked ${gameType}`);
-            }
-        });
-    }
-});
-
 let countries = [
     {
         name: 'France',
@@ -43,7 +25,35 @@ let countries = [
     }
 ]
 
-function runGame() {
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "submit") {
+                alert("You clicked Submit!");
+            } else {
+                let gameType = this.getAttribute("data-type");
+                runGame(gameType);
+            }
+        });
+    }
+
+    runGame("capitals");
+
+});
+
+function runGame(gameType) {
+
+    let random_object = Math.floor(Math.random() * 4);
+    let countryName = countries[random_object].name;
+    
+    if (gameType === "capitals") {
+        displayCapitalsQuestion(countryName);
+    } else {
+        alert('Unknown game type: $(gameType)');
+        throw 'Unknown game type: ${gameType). Aborting!';
+    }
 
 }
 
@@ -63,8 +73,8 @@ function incrementWrongAnswer() {
 
 }
 
-function displayCapitalsQuestion() {
-
+function displayCapitalsQuestion(countryName) {
+    document.getElementById('country-name').textContent = countryName;
 }
 
 function displayRiversQuestion() {
