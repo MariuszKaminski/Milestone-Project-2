@@ -54,7 +54,7 @@ let countryName = countries[randomObject].name;
 function runGame(gameType) {
     
     if (gameType === "capitals") {
-        displayCapitalsQuestion(countryName, capitalsSub);
+        displayCapitalsQandA(countryName, capitalsSub);
         //displayCapitalsAnswers(capitalsSub);
     } else {
         alert(`Unknown game type: ${gameType}`);
@@ -137,8 +137,8 @@ function incrementCorrectAnswer() {
 function incrementWrongAnswer() {
 
 }
-// function displaying random country in the question and 3 answers whenever Capitals game is loaded
-function displayCapitalsQuestion(countryName, capitalsSub) {
+// function displaying random country in the question and 3 answers for the capitals game
+function displayCapitalsQandA(countryName, capitalsSub) {
     document.getElementById('country-name').textContent = countryName;
     document.getElementById('answerA').textContent = capitalsSub[0];
     document.getElementById('answerB').textContent = capitalsSub[1];
