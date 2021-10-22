@@ -52,6 +52,7 @@ function runGame(gameType) {
     
     if (gameType === "capitals") {
         displayCapitalsQuestion(countryName);
+        displayCapitalsAnswers(capitalsSub);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
@@ -143,8 +144,10 @@ function displayCapitalsQuestion(countryName) {
 }
 
 
-function displayCapitalsAnswers() {
-
+function displayCapitalsAnswers(capitalsSub) {
+    document.getElementById('answerA').textContent = capitalsSub[0];
+    document.getElementById('answerB').textContent = capitalsSub[1];
+    document.getElementById('answerC').textContent = capitalsSub[2];
 }
 
 
