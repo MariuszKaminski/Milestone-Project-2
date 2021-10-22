@@ -54,8 +54,8 @@ let countryName = countries[randomObject].name;
 function runGame(gameType) {
     
     if (gameType === "capitals") {
-        displayCapitalsQuestion(countryName);
-        displayCapitalsAnswers(capitalsSub);
+        displayCapitalsQuestion(countryName, capitalsSub);
+        //displayCapitalsAnswers(capitalsSub);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
@@ -84,7 +84,7 @@ function shuffleArrElements(array) {
 let capitalsArr = getObjValues(countries, "capital");
 console.log(capitalsArr);
 
-// Using suffle ArrElements to shuffle capitals array
+// Using shuffle function ArrElements to shuffle capitals array
 shuffleArrElements(capitalsArr);
 
 console.log(capitalsArr);
@@ -112,7 +112,7 @@ let checkSubArr = capitalsSub.includes(correctCapital);
 
 console.log(checkSubArr);
 
-// If the array does not include correct answer/capital, the correct answer is added to the array. If it's already present, third element from the shuffled array is added
+// If the array does not include correct answer/capital, the correct answer is added to the array. If it's already present, third element from the shuffled capitals array is added instead
 if (checkSubArr !== true) {
     capitalsSub.push(correctCapital);
 } else {
@@ -137,17 +137,20 @@ function incrementCorrectAnswer() {
 function incrementWrongAnswer() {
 
 }
-// function displaying random country in the question whenever Capitals game is loaded
-function displayCapitalsQuestion(countryName) {
+// function displaying random country in the question and 3 answers whenever Capitals game is loaded
+function displayCapitalsQuestion(countryName, capitalsSub) {
     document.getElementById('country-name').textContent = countryName;
-}
-
-// function displaying answers whenever Capitals game is loaded
-function displayCapitalsAnswers(capitalsSub) {
     document.getElementById('answerA').textContent = capitalsSub[0];
     document.getElementById('answerB').textContent = capitalsSub[1];
     document.getElementById('answerC').textContent = capitalsSub[2];
 }
+
+/* function displaying answers whenever Capitals game is loaded
+function displayCapitalsAnswers(capitalsSub) {
+    document.getElementById('answerA').textContent = capitalsSub[0];
+    document.getElementById('answerB').textContent = capitalsSub[1];
+    document.getElementById('answerC').textContent = capitalsSub[2];
+}*/
 
 
 function displayRiversQuestion() {
