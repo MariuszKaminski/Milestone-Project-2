@@ -26,6 +26,8 @@ let countries = [
     }
 ]
 
+
+// Event listener for
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -43,10 +45,11 @@ document.addEventListener("DOMContentLoaded", function() {
     runGame("capitals");
 
 });
-
+// Code for choosing a random country name from the countries array to be inserted into the question
 let randomObject = Math.floor(Math.random() * 4);
 let countryName = countries[randomObject].name;
     console.log(countryName);
+
 
 function runGame(gameType) {
     
@@ -58,7 +61,6 @@ function runGame(gameType) {
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
 
-    
 }
 
 function getObjValues(input, field) {
@@ -74,16 +76,25 @@ function shuffleArrElements(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+// CAPITALS GAME CODE
+
+//Getting an array of capitals
+
 let capitalsArr = getObjValues(countries, "capital");
 console.log(capitalsArr);
 
+// Using suffle ArrElements to shuffle capitals array
 shuffleArrElements(capitalsArr);
 
 console.log(capitalsArr);
+
+// Limiting the array to two capitals
 let capitalsSub = capitalsArr.slice(0, 2);
 
 console.log(capitalsSub);
 
+// finding the opbject with the correct answer (capital) for the country given in the question
 let correctCapital = countries.find(function(country, index) {
     if(country.name == countryName)
     return true;
@@ -91,14 +102,17 @@ let correctCapital = countries.find(function(country, index) {
 
 console.log(correctCapital);
 
+// Getting the correct answer (name of the capital) form the object
 correctCapital = correctCapital.capital;
 
 console.log(correctCapital);
 
+// Checking if the limited array already incluedes the correct answer/capital
 let checkSubArr = capitalsSub.includes(correctCapital);
 
 console.log(checkSubArr);
 
+// If the array does not include correct answer/capital, the correct answer is added to the array. If it's already present, third element from the shuffled array is added
 if (checkSubArr !== true) {
     capitalsSub.push(correctCapital);
 } else {
@@ -106,21 +120,6 @@ if (checkSubArr !== true) {
 };
 
 console.log(capitalsSub);
-
-//capitalsSub.push(correctCapital);
-
-//console.log(capitalsSub);
-
-
-//let capitalsSub = capitalsArr.slice(0, 2);
-
-//capitalsShuffled = shuffleArrElements(capitalsArr);
-//capitalsSub = capitalsArr.slice(0, 2).push(countryName);
-//let capitalsSubCorr = [];
-//capitalsSubCorr = capitalsSub.push(countryName[0]);
-
-   
-//let capitalsAddCorr = capitalsSub.push(countryName);
 
 
 function checkAnswer() {
@@ -138,12 +137,12 @@ function incrementCorrectAnswer() {
 function incrementWrongAnswer() {
 
 }
-
+// function displaying random country in the question whenever Capitals game is loaded
 function displayCapitalsQuestion(countryName) {
     document.getElementById('country-name').textContent = countryName;
 }
 
-
+// function displaying answers whenever Capitals game is loaded
 function displayCapitalsAnswers(capitalsSub) {
     document.getElementById('answerA').textContent = capitalsSub[0];
     document.getElementById('answerB').textContent = capitalsSub[1];
