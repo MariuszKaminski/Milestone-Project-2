@@ -1,3 +1,4 @@
+
 let countries = [
     {
         name: 'France',
@@ -43,13 +44,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-
+let randomObject = Math.floor(Math.random() * 4);
+let countryName = countries[randomObject].name;
+console.log(countryName);
 
 function runGame(gameType) {
 
-    let random_object = Math.floor(Math.random() * 4);
-    let countryName = countries[random_object].name;
-    
     if (gameType === "capitals") {
         displayCapitalsQuestion(countryName);
     } else {
@@ -59,16 +59,32 @@ function runGame(gameType) {
 
 }
 
-function getCapitals(input, field) {
+function getObjValues(input, field) {
     let output = [];
     for (var i=0; i < input.length; ++i)
         output.push(input[i][field]);
     return output;
 }
 
-let capitalsArr = getCapitals(countries, "name");
-//let capitalsSub = capitalsArr.slice(0, 2);
+function shuffleArrElements(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+let capitalsArr = getObjValues(countries, "name");
+console.log(capitalsArr);
+shuffleArrElements(capitalsArr);
+
+
+//capitalsShuffled = shuffleArrElements(capitalsArr);
+//capitalsSub = capitalsArr.slice(0, 2).push(countryName);
+//let capitalsSubCorr = [];
+//capitalsSubCorr = capitalsSub.push(countryName[0]);
+
+   
 //let capitalsAddCorr = capitalsSub.push(countryName);
+
 
 function checkAnswer() {
 
@@ -90,7 +106,10 @@ function displayCapitalsQuestion(countryName) {
     document.getElementById('country-name').textContent = countryName;
 }
 
-function displayCapitalsAnswers()
+
+function displayCapitalsAnswers() {
+
+}
 
 
 function displayRiversQuestion() {
