@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let randomObject = Math.floor(Math.random() * 4);
 let countryName = countries[randomObject].name;
-console.log(countryName);
+    console.log(countryName);
 
 function runGame(gameType) {
-
+    
     if (gameType === "capitals") {
         displayCapitalsQuestion(countryName);
     } else {
@@ -57,6 +57,7 @@ function runGame(gameType) {
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
 
+    
 }
 
 function getObjValues(input, field) {
@@ -72,10 +73,45 @@ function shuffleArrElements(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
-let capitalsArr = getObjValues(countries, "name");
+let capitalsArr = getObjValues(countries, "capital");
 console.log(capitalsArr);
+
 shuffleArrElements(capitalsArr);
 
+console.log(capitalsArr);
+let capitalsSub = capitalsArr.slice(0, 2);
+
+console.log(capitalsSub);
+
+let correctCapital = countries.find(function(country, index) {
+    if(country.name == countryName)
+    return true;
+});
+
+console.log(correctCapital);
+
+correctCapital = correctCapital.capital;
+
+console.log(correctCapital);
+
+let checkSubArr = capitalsSub.includes(correctCapital);
+
+console.log(checkSubArr);
+
+if (checkSubArr !== true) {
+    capitalsSub.push(correctCapital);
+} else {
+    capitalsSub.push(capitalsArr[2]);
+};
+
+console.log(capitalsSub);
+
+//capitalsSub.push(correctCapital);
+
+//console.log(capitalsSub);
+
+
+//let capitalsSub = capitalsArr.slice(0, 2);
 
 //capitalsShuffled = shuffleArrElements(capitalsArr);
 //capitalsSub = capitalsArr.slice(0, 2).push(countryName);
