@@ -121,10 +121,11 @@ if (checkSubArr !== true) {
 
 console.log(capitalsSub);
 
-//Event handler for radio buttons
+
 
 let selectedAnswer = '';
 
+//Function to get selected answer text
 function getAnswersText() {
     
     let radioes = document.getElementsByName('answers');
@@ -139,6 +140,7 @@ function getAnswersText() {
         }
 }
 
+//Event handler for radio buttons
 let radioes = document.forms[0].elements['answers'];
     for (radio in radioes) {
         radioes[radio].onclick = function() {
