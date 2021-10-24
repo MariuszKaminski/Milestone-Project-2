@@ -158,6 +158,10 @@ function checkAnswer() {
     }   
 }
 
+function checkGameType() {
+    let question = 
+}
+
 function incrementCorrectAnswer() {
 
 }
