@@ -27,7 +27,7 @@ let countries = [
 ]
 
 
-// Event listener for
+// Event listener for game type
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -121,13 +121,33 @@ if (checkSubArr !== true) {
 
 console.log(capitalsSub);
 
+//Event handler for radio buttons
 
-function checkAnswer() {
 
+
+function getAnswersText() {
+    
+    let radioes = document.getElementsByName('answers');
+    
+        for (let i=0; i < radioes.length; i++) {
+            if (radioes[i].checked) {
+            let selector = 'label[for=' + radioes[i].id + ']';
+            let label = document.querySelector(selector);
+            let text = label.innerHTML;
+            console.log(text);
+            }
+        }
 }
 
-function checkCorrectAnswer() {
-
+let radioes = document.forms[0].elements['answers'];
+    for (radio in radioes) {
+        radioes[radio].onclick = function() {
+            getAnswersText();
+        }
+    }
+    
+function checkAnswer() {
+    
 }
 
 function incrementCorrectAnswer() {
@@ -145,14 +165,6 @@ function displayCapitalsQandA(countryName, capitalsSub) {
     document.getElementById('answerC').textContent = capitalsSub[2];
 }
 
-/* function displaying answers whenever Capitals game is loaded
-function displayCapitalsAnswers(capitalsSub) {
-    document.getElementById('answerA').textContent = capitalsSub[0];
-    document.getElementById('answerB').textContent = capitalsSub[1];
-    document.getElementById('answerC').textContent = capitalsSub[2];
-}*/
-
-
 function displayRiversQuestion() {
 
 }
@@ -164,5 +176,4 @@ function displayMountainsQuestion() {
 function displayContinentsQuestion() {
 
 }
-
 
