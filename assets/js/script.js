@@ -123,7 +123,7 @@ console.log(capitalsSub);
 
 //Event handler for radio buttons
 
-
+let selectedAnswer = '';
 
 function getAnswersText() {
     
@@ -133,8 +133,8 @@ function getAnswersText() {
             if (radioes[i].checked) {
             let selector = 'label[for=' + radioes[i].id + ']';
             let label = document.querySelector(selector);
-            let text = label.innerHTML;
-            console.log(text);
+            let answerText = label.innerHTML;
+            selectedAnswer = answerText;
             }
         }
 }
@@ -146,7 +146,8 @@ let radioes = document.forms[0].elements['answers'];
         }
     }
     
-function checkAnswer() {
+
+    function checkAnswer() {
     
 }
 
