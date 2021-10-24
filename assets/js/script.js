@@ -16,7 +16,7 @@ let countries = [
         name: 'Spain',
         capital: 'Madrid',
         river: 'Tagus',
-        mountain: 'Pico del Teide',
+        mountain: 'Pico del Teide'
     },
     {
         name: 'Italy',
