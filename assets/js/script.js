@@ -33,8 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                //alert("You clicked Submit!");
+            if (this.getAttribute("data-type") === "submit") {                
                 checkAnswer();
             } else {
                 let gameType = this.getAttribute("data-type");
@@ -148,18 +147,33 @@ let radioes = document.forms[0].elements['answers'];
             getAnswersText();
         }
     }
-    
 
-function checkAnswer() {
-    if (selectedAnswer === correctCapital) {
-        alert('Your answer is correct!');
-    } else {
-        alert('Your answer is incorrect!');
-    }   
-}
+
 
 function checkGameType() {
-    let question = 
+    let question = document.getElementById("question").innerText;
+    
+        if (question === 'Which city is the capital of ') {
+            return "capitals";
+            
+        } else {
+            alert(`Unimplemented question ${question}`);
+            throw `Unimplemented operator ${question}. Aborting!`;
+        }
+}
+
+let checkedGame = checkGameType();
+
+function checkAnswer() {
+    
+    
+    if (selectedAnswer === correctCapital) {
+        alert('Your answer is correct!');       
+    } else {
+        alert(`Your answer is ${selectedAnswer}. The correct answer is ${correctCapital}!`);
+    }
+    uncheckRadio();
+    runGame(checkedGame);
 }
 
 function incrementCorrectAnswer() {
@@ -175,6 +189,10 @@ function displayCapitalsQandA(countryName, capitalsSub) {
     document.getElementById('answerA').textContent = capitalsSub[0];
     document.getElementById('answerB').textContent = capitalsSub[1];
     document.getElementById('answerC').textContent = capitalsSub[2];
+}
+
+function uncheckRadio() {
+    
 }
 
 function displayRiversQuestion() {
