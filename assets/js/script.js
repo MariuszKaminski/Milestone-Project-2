@@ -46,21 +46,64 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 // Code for choosing a random country name from the countries array to be inserted into the question
-let randomObject = Math.floor(Math.random() * 4);
-let countryName = countries[randomObject].name;
-    console.log(countryName);
+/*function randomObject() {
+    let randomObject = Math.floor(Math.random() * 4);
+    let countryName = countries[randomObject].name;
+    return countryName;
+}*/
 
 
 function runGame(gameType) {
     
+    let randomObject = Math.floor(Math.random() * 4);
+    let countryName = countries[randomObject].name;
+    let capitalsArr = getObjValues(countries, "capital");
+    console.log(capitalsArr);
+    
+    // Using shuffle function ArrElements to shuffle capitals array
+    shuffleArrElements(capitalsArr);
+    
+    console.log(capitalsArr);
+    
+    // Limiting the array to two capitals
+    let capitalsSub = capitalsArr.slice(0, 2);
+    
+    console.log(capitalsSub);
+    
+    // finding the opbject with the correct answer (capital) for the country given in the question
+    let correctCapital = countries.find(function(country, index) {
+        if(country.name == countryName)
+        return true;
+    });
+    
+    console.log(correctCapital);
+    
+    // Getting the correct answer (name of the capital) form the object
+    correctCapital = correctCapital.capital;
+    
+    console.log(correctCapital);
+    
+    // Checking if the limited array already incluedes the correct answer/capital
+    let checkSubArr = capitalsSub.includes(correctCapital);
+    
+    console.log(checkSubArr);
+    
+    // If the array does not include correct answer/capital, the correct answer is added to the array. If it's already present, third element from the shuffled capitals array is added instead
+    if (checkSubArr !== true) {
+        capitalsSub.push(correctCapital);
+    } else {
+        capitalsSub.push(capitalsArr[2]);
+    };
+    
+    console.log(capitalsSub);    
+
     if (gameType === "capitals") {
-        displayCapitalsQandA(countryName, capitalsSub);
-        //displayCapitalsAnswers(capitalsSub);
+        displayCapitalsQandA(countryName, capitalsSub);        
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
-
+    
 }
 
 function getObjValues(input, field) {
@@ -80,7 +123,7 @@ function shuffleArrElements(array) {
 // CAPITALS GAME CODE
 
 //Getting an array of capitals
-
+/*
 let capitalsArr = getObjValues(countries, "capital");
 console.log(capitalsArr);
 
@@ -120,7 +163,7 @@ if (checkSubArr !== true) {
 };
 
 console.log(capitalsSub);
-
+*/
 
 
 let selectedAnswer = '';
@@ -144,7 +187,7 @@ function getAnswersText() {
 let radioes = document.forms[0].elements['answers'];
     for (radio in radioes) {
         radioes[radio].onclick = function() {
-            getAnswersText();
+            getAnswersText();            
         }
     }
 
@@ -168,12 +211,18 @@ function checkAnswer() {
     
     
     if (selectedAnswer === correctCapital) {
-        alert('Your answer is correct!');       
+        alert('Your answer is correct!');
+        //randomObject();
+        //runGame("capitals");       
     } else {
         alert(`Your answer is ${selectedAnswer}. The correct answer is ${correctCapital}!`);
-    }
-    uncheckRadio();
-    runGame(checkedGame);
+        //randomObject();
+        //runGame("capitals");
+    };
+    //uncheckRadio();
+    //randomObject();
+    //randomObject();
+    runGame(gameType);
 }
 
 function incrementCorrectAnswer() {
