@@ -47,13 +47,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 // Code for choosing a random country name from the countries array to be inserted into the question
-/*function randomObject() {
-    let randomObject = Math.floor(Math.random() * 4);
-    let countryName = countries[randomObject].name;
-    return countryName;
-}*/
+
 function randomCountry() {
-    randomObject = Math.floor(Math.random() * 4);
+    let randomObject = Math.floor(Math.random() * 4);
     let randomCountry = countries[randomObject].name;
     return randomCountry;
 }
@@ -62,7 +58,7 @@ let countryName = randomCountry();
 
 function runGame(gameType) {
 
-    //let countryName = randomCountry();
+    //randomCountry();
     let newArray = capitalsSub();  
     
     if (gameType === "capitals") {
@@ -71,8 +67,10 @@ function runGame(gameType) {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
-    
+    //randomCountry();
 }
+
+
 
 function getObjValues(input, field) {
     let output = [];
@@ -183,17 +181,17 @@ function checkAnswer() {
     let correctAnswer = correctElement;
     
     if (selectedAnswer === correctAnswer) {
-        alert('Your answer is correct!');
-        //randomObject();
-        //runGame("capitals");       
+        alert('Your answer is correct!');        
     } else {
-        alert(`Your answer is ${selectedAnswer}. The correct answer is ${correctAnswer}!`);
-        //randomObject();
-        //runGame("capitals");
+        alert(`Your answer is ${selectedAnswer}. The correct answer is ${correctAnswer}!`);        
     };
     //uncheckRadio();
-    //randomCountry();
     runGame('capitals');
+    randomCountry();
+    let element = randomCountry();
+    capitalsSub();
+    let array = capitalsSub();
+    displayCapitalsQandA(element, array);
 }
 
 function incrementCorrectAnswer() {
