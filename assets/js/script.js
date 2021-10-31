@@ -23,6 +23,12 @@ let countries = [
         capital: 'Rome',
         river: 'Po',
         mountain: 'Monte Bianco'
+    },
+    {
+        name: 'United Kingdom',
+        capital: 'London',
+        river: 'Severn',
+        mountain: 'Ben Nevis'
     }
 ]
 
@@ -49,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Code for choosing a random country name from the countries array to be inserted into the question
 
 function randomCountry() {
-    let randomObject = Math.floor(Math.random() * 4);
+    let randomObject = Math.floor(Math.random() * 5);
     let randomCountry = countries[randomObject].name;
     return randomCountry;
 }
@@ -57,17 +63,22 @@ function randomCountry() {
 let countryName = randomCountry();
 
 function runGame(gameType) {
-
-    //randomCountry();
-    let newArray = capitalsSub();  
     
+    let newCountryArr = capitalsSub();  
+    
+    //let newRiverArr = riversSub();
+
     if (gameType === "capitals") {
-        displayCapitalsQandA(countryName, newArray);        
+        displayCapitalsQandA(countryName, newCountryArr);        
+    
+    } else if (gameType === "rivers"){
+        displayRiversQandA(riverName, newRiverArr)
+    
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
-    //randomCountry();
+    
 }
 
 
@@ -92,6 +103,7 @@ function shuffleArrElements(array) {
 function capitalsSub() {
     let capitalsArr = getObjValues(countries, "capital");
     console.log(capitalsArr);
+    
     let correctCapital = correctObject;
     // Using shuffle function ArrElements to shuffle capitals array
     shuffleArrElements(capitalsArr);
@@ -128,13 +140,53 @@ function capitalsSub() {
     //console.log(capitalsSub);
 }
 
+function riversSub() {
+    let riversArr = getObjValues(countries, "river");
+    console.log(riversArr);
+    let correctRiver = correctObject;
+    // Using shuffle function ArrElements to shuffle capitals array
+    shuffleArrElements(riversArr);
+
+    console.log(riversArr);
+
+    // Limiting the array to two capitals
+    let riversSub = riversArr.slice(0, 2);
+
+    console.log(riversSub);
+
+     // finding the opbject with the correct answer (capital) for the country given in the question
+
+
+    console.log(correctRiver);
+
+    // Getting the correct answer (name of the capital) form the object
+    correctRiver = correctRiver.river;
+
+    console.log(correctRiver);
+
+    // Checking if the limited array already incluedes the correct answer/capital
+    let checkSubArr = riversSub.includes(correctRiver);
+
+    console.log(checkSubArr);
+
+    // If the array does not include correct answer/capital, the correct answer is added to the array. If it's already present, third element from the shuffled capitals array is added instead
+    if (checkSubArr !== true) {
+        riversSub.push(correctRiver);
+    } else {
+        riversSub.push(riversArr[2]);
+    };
+    return riversSub;
+    //console.log(capitalsSub);
+}
 
 let correctObject = countries.find(function(country) {
     if(country.name === countryName)
     return true;
 });
 
-let correctElement = correctObject.capital;
+
+let correctCapElement = correctObject.capital;
+let correctRivElement = correctObject.river;
 
 //let selectedAnswer = '';
 
@@ -178,13 +230,13 @@ let checkedGame = checkGameType();
 function checkAnswer() {
     let selectedAnswer = getAnswersText();
 
-    let correctAnswer = correctElement;
+    let correctCapAnswer = correctCapElement;
     
-    if (selectedAnswer === correctAnswer) {
+    if (selectedAnswer === correctCapAnswer) {
         alert('Your answer is correct!');
         incrementCorrectAnswer();        
     } else {
-        alert(`Your answer is ${selectedAnswer}. The correct answer is ${correctAnswer}!`);
+        alert(`Your answer is ${selectedAnswer}. The correct answer is ${correctCapAnswer}!`);
         incrementWrongAnswer();        
     };
     //uncheckRadio();
