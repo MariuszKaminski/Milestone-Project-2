@@ -181,9 +181,11 @@ function checkAnswer() {
     let correctAnswer = correctElement;
     
     if (selectedAnswer === correctAnswer) {
-        alert('Your answer is correct!');        
+        alert('Your answer is correct!');
+        incrementCorrectAnswer();        
     } else {
-        alert(`Your answer is ${selectedAnswer}. The correct answer is ${correctAnswer}!`);        
+        alert(`Your answer is ${selectedAnswer}. The correct answer is ${correctAnswer}!`);
+        incrementWrongAnswer();        
     };
     //uncheckRadio();
     runGame('capitals');
@@ -196,9 +198,14 @@ function checkAnswer() {
 
 function incrementCorrectAnswer() {
 
+    let oldScore = parseInt(document.getElementById("correct").innerText);
+    document.getElementById("correct").innerText = ++oldScore;
 }
 
 function incrementWrongAnswer() {
+
+    let oldScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++oldScore;
 
 }
 // function displaying random country in the question and 3 answers for the capitals game
