@@ -224,12 +224,14 @@ function checkGameType() {
 let checkedGame = checkGameType();
 
 function checkAnswer() {
+    
     let selectedAnswer = getAnswersText();
 
     let questionWord = document.getElementById("country-name").innerText;
 
     let correctObject = countries.find(function(country, index) {
         if(country.name === questionWord)
+        // add else if her to get other values//
         return true;
     });
 
