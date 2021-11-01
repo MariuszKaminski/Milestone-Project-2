@@ -235,22 +235,24 @@ function checkAnswer() {
         return true;
     });
 
-    let correctElement = correctObject.capital;
+    let corrCapElement = correctObject.capital;
+    //let corrRivElement = correctObject.river;
+    let corrCapAnswer = corrCapElement;
+    //let corrRivAnswer = corrRivElement;
 
-    let correctAnswer = correctElement;
-    
-    if (selectedAnswer === correctAnswer) {
+    if (selectedAnswer === corrCapAnswer) {
         alert('Your answer is correct!');
         incrementCorrectAnswer();
-                
+        runGame('capitals');
+    //} if else (selectedAnswer = corrRivAnswer) {}            
     } else {
-        alert(`Your answer is ${selectedAnswer}. The correct answer is ${correctAnswer}!`);
+        alert(`Your answer is ${selectedAnswer}. The correct answer is ${corrCapAnswer}!`);
         incrementWrongAnswer();
-        
+        runGame('capitals');
     };
     //uncheckRadio();
     
-    runGame('capitals');
+    //runGame('capitals');
             
     //let countryName1 = randomCountry();
     
