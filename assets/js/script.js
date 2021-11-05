@@ -23,6 +23,12 @@ let countries = [
         capital: 'Rome',
         river: 'Po',
         mountain: 'Monte Bianco'
+    },
+    {
+        name: 'United Kingdom',
+        capital: 'London',
+        river: 'Severn',
+        mountain: 'Ben Nevis'
     }
 ]
 
@@ -49,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Code for choosing a random country name from the countries array to be inserted into the question
 
 function randomCountry() {
-    let randomObject = Math.floor(Math.random() * 4);
+    let randomObject = Math.floor(Math.random() * 5);
     let randomCountry = countries[randomObject].name;
     return randomCountry;
 }
