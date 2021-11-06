@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 checkGameType();
                 if (checkGameType() === "capitals") {                
                     checkCapitalAnswer();
+                } else if (checkGameType() === "rivers") {
+                    checkRiverAnswer();
                 }
                 // continue adding game types and check functions                               
             } else {
@@ -269,6 +271,36 @@ function checkCapitalAnswer() {
     //uncheckRadio();
         
 }
+
+function checkRiverAnswer() {
+    
+    let selectedAnswer = getAnswersText();
+
+    let questionWord = document.getElementById("country-name").innerText;
+
+    let correctObject = countries.find(function(country, index) {
+        if(country.name === questionWord)
+        return true;
+    });
+
+    let corrRivValue = correctObject.river;
+    
+    if (selectedAnswer === corrRivValue) {
+        alert('Your answer is correct!');
+        incrementCorrectAnswer();
+        runGame('rivers');
+        } else {
+            alert(`Your answer is ${selectedAnswer}. The correct answer is ${corrRivValue}!`);
+            incrementWrongAnswer();
+            runGame('rivers');
+        };
+    
+    //uncheckRadio();
+        
+}
+
+
+
 
 function incrementCorrectAnswer() {
 
