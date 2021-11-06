@@ -174,6 +174,27 @@ let countries = [
         river: 'Tana River',
         mountain: 'Mount Kenya',
         continent: 'Africa'
+    },
+    {
+        name: 'Australia',
+        capital: 'Canberra',
+        river: 'Murray River',
+        mountain: 'Mount Kosciuszko',
+        continent: 'Australia'
+    },
+    {
+        name: 'New Zealand',
+        capital: 'Wellington',
+        river: 'Waikato River',
+        mountain: 'Mount Cook',
+        continent: 'Australia'
+    },
+    {
+        name: 'Papua New Guinea',
+        capital: 'Port Moresby',
+        river: 'Sepik River',
+        mountain: 'Mount Wilhelm',
+        continent: 'Australia'
     }
 ]
 
@@ -209,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Code for choosing a random country name from the countries array to be inserted into the question
 
 function randomCountry() {
-    let randomObject = Math.floor(Math.random() * 20);
+    let randomObject = Math.floor(Math.random() * 28g);
     let randomCountry = countries[randomObject].name;
     return randomCountry;
 }
