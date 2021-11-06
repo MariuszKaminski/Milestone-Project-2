@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Code for choosing a random country name from the countries array to be inserted into the question
 
 function randomCountry() {
-    let randomObject = Math.floor(Math.random() * 28g);
+    let randomObject = Math.floor(Math.random() * 28);
     let randomCountry = countries[randomObject].name;
     return randomCountry;
 }
@@ -355,13 +355,18 @@ function runGame(gameType) {
         
         let continentsArr = getObjValues(countries, "continent");
         console.log(continentsArr);
+
+        //function to remove duplicate continents from the array
+        let nonDuplicateContArr = [...new Set(continentsArr)];
+        console.log(nonDuplicateContArr);
+
         let correctContinent = correctObject;
-        //add a function to remove duplicate continents from the array
-        shuffleArrElements(continentsArr);
+        
+        shuffleArrElements(nonDuplicateContArr);
     
-        console.log(continentsArr);
+        console.log(nonDuplicateContArr);
     
-        let continentsSub = continentsArr.slice(0, 2);
+        let continentsSub = nonDuplicateContArr.slice(0, 2);
     
         console.log(continentsSub);
                     
@@ -378,7 +383,7 @@ function runGame(gameType) {
         if (checkSubArr !== true) {
             continentsSub.push(correctContinent);
         } else {
-            continentsSub.push(continentsArr[2]);
+            continentsSub.push(nonDuplicateContArr[2]);
         };
         return continentsSub;
         
