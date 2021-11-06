@@ -612,20 +612,3 @@ function displayCapitalsQandA(question, element, array) {
     document.getElementById('answerC').textContent = array[2];
     
 }
-
-
-function uncheckRadio() {
-    
-}
-
-function displayRiversQuestion() {
-
-}
-
-function displayMountainsQuestion() {
-
-}
-
-function displayContinentsQuestion() {
-
-}
