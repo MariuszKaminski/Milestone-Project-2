@@ -34,6 +34,41 @@ let countries = [
         river: 'Severn',
         mountain: 'Ben Nevis',
         continent: 'Europe'
+    },
+    {
+        name: 'Canada',
+        capital: 'Ottawa',
+        river: 'MacKenzie',
+        mountain: 'Mount Logan',
+        continent: 'North America'
+    },
+    {
+        name: 'United States of America',
+        capital: 'Washington, D.C.',
+        river: 'Missouri',
+        mountain: 'Denali',
+        continent: 'North America'
+    },
+    {
+        name: 'Mexico',
+        capital: 'Mexico City',
+        river: 'Rio Grande',
+        mountain: 'Pico de Orizaba',
+        continent: 'North America'
+    },
+    {
+        name: 'Cuba',
+        capital: 'Havana',
+        river: 'Rio Cauto',
+        mountain: 'Pico Turquino',
+        continent: 'North America'
+    },
+    {
+        name: 'Guatemala',
+        capital: 'Guatemala City',
+        river: 'Rio Motagua',
+        mountain: 'Volcán Tajumulco',
+        continent: 'North America'
     }
 ]
 
@@ -52,8 +87,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     checkRiverAnswer();
                 } else if (checkGameType() === "mountains") {
                     checkMountainAnswer();
+                } else if (checkGameType() === "continents") {
+                    checkContinentAnswer();
                 }
-                // continue adding game types and check functions                               
+                                               
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
@@ -67,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Code for choosing a random country name from the countries array to be inserted into the question
 
 function randomCountry() {
-    let randomObject = Math.floor(Math.random() * 5);
+    let randomObject = Math.floor(Math.random() * 10);
     let randomCountry = countries[randomObject].name;
     return randomCountry;
 }
@@ -187,6 +224,39 @@ function runGame(gameType) {
         return mountainsSub;
         
     }
+
+    function continentsSub() {
+        
+        let continentsArr = getObjValues(countries, "continent");
+        console.log(continentsArr);
+        let correctContinent = correctObject;
+        //add a function to remove duplicate continents from the array
+        shuffleArrElements(continentsArr);
+    
+        console.log(continentsArr);
+    
+        let continentsSub = continentsArr.slice(0, 2);
+    
+        console.log(continentsSub);
+                    
+        console.log(correctContinent);
+    
+        correctContinent = correctContinent.continent;
+    
+        console.log(correctContinent);
+    
+        let checkSubArr = continentsSub.includes(correctContinent);
+    
+        console.log(checkSubArr);
+           
+        if (checkSubArr !== true) {
+            continentsSub.push(correctContinent);
+        } else {
+            continentsSub.push(continentsArr[2]);
+        };
+        return continentsSub;
+        
+    }
     
     let capitalsQuestion = 'Which city is the capital of ';
 
@@ -205,6 +275,9 @@ function runGame(gameType) {
     } else if (gameType === "mountains") {
         let newArray = mountainsSub();
         displayCapitalsQandA(mountainsQuestion, countryName, newArray);
+    } else if (gameType === "continents") {
+        let newArray = continentsSub();
+        displayCapitalsQandA(continentsQuestion, countryName, newArray);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
@@ -357,6 +430,32 @@ function checkMountainAnswer() {
         
 }
 
+function checkContinentAnswer() {
+    
+    let selectedAnswer = getAnswersText();
+
+    let questionWord = document.getElementById("country-name").innerText;
+
+    let correctObject = countries.find(function(country, index) {
+        if(country.name === questionWord)
+        return true;
+    });
+
+    let corrContValue = correctObject.continent;
+    
+    if (selectedAnswer === corrContValue) {
+        alert('Your answer is correct!');
+        incrementCorrectAnswer();
+        runGame('continents');
+        } else {
+            alert(`Your answer is ${selectedAnswer}. The correct answer is ${corrContValue}!`);
+            incrementWrongAnswer();
+            runGame('continents');
+        };
+    
+    //uncheckRadio();
+        
+}
 
 function incrementCorrectAnswer() {
 
