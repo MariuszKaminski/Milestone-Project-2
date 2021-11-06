@@ -69,6 +69,41 @@ let countries = [
         river: 'Rio Motagua',
         mountain: 'Volcán Tajumulco',
         continent: 'North America'
+    },
+    {
+        name: 'Brazil',
+        capital: 'Brasilia',
+        river: 'Amazon',
+        mountain: 'Pico Alto',
+        continent: 'South America'
+    },
+    {
+        name: 'Colombia',
+        capital: 'Bogotá',
+        river: 'Magdalena River',
+        mountain: 'Pico Cristóbal Cólon',
+        continent: 'South America'
+    },
+    {
+        name: 'Argentina',
+        capital: 'Buenos Aires',
+        river: 'Paraná River',
+        mountain: 'Pico Alto',
+        continent: 'South America'
+    },
+    {
+        name: 'Chile',
+        capital: 'Santiago',
+        river: 'Rio Loa',
+        mountain: 'Ojos del Salado',
+        continent: 'South America'
+    },
+    {
+        name: 'Peru',
+        capital: 'Lima',
+        river: 'Ucayali',
+        mountain: 'Huascarán',
+        continent: 'South America'
     }
 ]
 
