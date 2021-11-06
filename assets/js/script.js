@@ -104,6 +104,41 @@ let countries = [
         river: 'Ucayali',
         mountain: 'Huascarán',
         continent: 'South America'
+    },
+    {
+        name: 'China',
+        capital: 'Beijing',
+        river: 'Yangtze',
+        mountain: 'Mount Everest',
+        continent: 'Asia'
+    },
+    {
+        name: 'India',
+        capital: 'New Delhi',
+        river: 'Indus',
+        mountain: 'Kangchenjunga',
+        continent: 'Asia'
+    },
+    {
+        name: 'Kazakhstan',
+        capital: 'Nur-Sultan',
+        river: 'Irtysh',
+        mountain: 'Khan Tengri',
+        continent: 'Asia'
+    },
+    {
+        name: 'Indonesia',
+        capital: 'Jakarta',
+        river: 'Kapuas River',
+        mountain: 'Puncak Jaya',
+        continent: 'Asia'
+    },
+    {
+        name: 'Iran',
+        capital: 'Tehran',
+        river: 'Karun',
+        mountain: 'Mount Damavand',
+        continent: 'Asia'
     }
 ]
 
@@ -139,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Code for choosing a random country name from the countries array to be inserted into the question
 
 function randomCountry() {
-    let randomObject = Math.floor(Math.random() * 10);
+    let randomObject = Math.floor(Math.random() * 20);
     let randomCountry = countries[randomObject].name;
     return randomCountry;
 }
