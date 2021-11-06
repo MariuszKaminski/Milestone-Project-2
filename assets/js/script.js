@@ -44,9 +44,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {                
-                checkAnswer();
-                
+            if (this.getAttribute("data-type") === "submit") {
+                checkGameType();
+                if (checkGameType() === "capitals") {                
+                    checkCapitalAnswer();
+                }                
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
@@ -65,41 +67,21 @@ function randomCountry() {
     return randomCountry;
 }
 
-function randomRiver() {
-    let randomObject = Math.floor(Math.random() * 5);
-    let randomRiver = countries[randomObject].river;
-    return randomRiver;
-}
-
-function randomMountain() {
-    let randomObject = Math.floor(Math.random() * 5);
-    let randomMountain = countries[randomObject].mountain;
-    return randomMountain;
-}
-
-function randomContinent() {
-    let randomObject = Math.floor(Math.random() * 5);
-    let randomRiver = countries[randomObject].continent;
-    return randomRiver;
-}
-
-
-
-
 function runGame(gameType) {
     
         
     let countryName = randomCountry();
-            
+                
     let correctObject = countries.find(function(country, index) {
     if(country.name === countryName)
     return true;
     });
-
+    
     function capitalsSub() {
         let capitalsArr = getObjValues(countries, "capital");
         console.log(capitalsArr);
         let correctCapital = correctObject;
+        
         // Using shuffle function ArrElements to shuffle capitals array
         shuffleArrElements(capitalsArr);
     
@@ -135,7 +117,45 @@ function runGame(gameType) {
         //console.log(capitalsSub);
     }
 
-    let newArray = capitalsSub();
+    function riversSub() {
+        let riversArr = getObjValues(countries, "river");
+        console.log(riversArr);
+        let correctRiver = correctObject;
+        
+        // Using shuffle function ArrElements to shuffle capitals array
+        shuffleArrElements(riversArr);
+    
+        console.log(riversArr);
+    
+        // Limiting the array to two capitals
+        let riversSub = riversArr.slice(0, 2);
+    
+        console.log(riversSub);
+    
+         // finding the opbject with the correct answer (capital) for the country given in the question
+    
+    
+        console.log(correctRiver);
+    
+        // Getting the correct answer (name of the capital) form the object
+        correctRiver = correctRiver.river;
+    
+        console.log(correctRiver);
+    
+        // Checking if the limited array already incluedes the correct answer/capital
+        let checkSubArr = riversSub.includes(correctRiver);
+    
+        console.log(checkSubArr);
+    
+        // If the array does not include correct answer/capital, the correct answer is added to the array. If it's already present, third element from the shuffled capitals array is added instead
+        if (checkSubArr !== true) {
+            riversSub.push(correctRiver);
+        } else {
+            riversSub.push(riversArr[2]);
+        };
+        return riversSub;
+        //console.log(riversSub);
+    }
     
     let capitalsQuestion = 'Which city is the capital of ';
 
@@ -146,7 +166,11 @@ function runGame(gameType) {
     let continentsQuestion = 'In which continent is ';
     
     if (gameType === "capitals") {
-        displayCapitalsQandA(capitalsQuestion, countryName, newArray);        
+        let newArray = capitalsSub();
+        displayCapitalsQandA(capitalsQuestion, countryName, newArray);
+    } else if (gameType === "rivers") {
+        let newArray = riversSub();
+        displayCapitalsQandA(riversQuestion, countryName, newArray);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
@@ -200,15 +224,25 @@ function checkGameType() {
         if (question === 'Which city is the capital of ') {
             return "capitals";
             
+        } else if (question === 'Which is the longest river in ') {
+            return "rivers";
+        
+        } else if (question  === 'Which is the tallest mountain in ') {
+            return "mountains";
+        
+        } else if (question === 'In which continent is ') {
+            return "continents";
+        
         } else {
             alert(`Unimplemented question ${question}`);
             throw `Unimplemented operator ${question}. Aborting!`;
         }
 }
 
-let checkedGame = checkGameType();
+//let checkedGame = checkGameType();
 
-function checkAnswer() {
+
+function checkCapitalAnswer() {
     
     let selectedAnswer = getAnswersText();
 
@@ -216,25 +250,20 @@ function checkAnswer() {
 
     let correctObject = countries.find(function(country, index) {
         if(country.name === questionWord)
-        // add else if her to get other values//
         return true;
     });
 
-    let corrCapElement = correctObject.capital;
-    //let corrRivElement = correctObject.river;
-    let corrCapAnswer = corrCapElement;
-    //let corrRivAnswer = corrRivElement;
-
-    if (selectedAnswer === corrCapAnswer) {
+    let corrCapValue = correctObject.capital;
+    
+    if (selectedAnswer === corrCapValue) {
         alert('Your answer is correct!');
         incrementCorrectAnswer();
         runGame('capitals');
-    //} if else (selectedAnswer = corrRivAnswer) {}            
-    } else {
-        alert(`Your answer is ${selectedAnswer}. The correct answer is ${corrCapAnswer}!`);
-        incrementWrongAnswer();
-        runGame('capitals');
-    };
+        } else {
+            alert(`Your answer is ${selectedAnswer}. The correct answer is ${corrCapValue}!`);
+            incrementWrongAnswer();
+            runGame('capitals');
+        };
     
     //uncheckRadio();
         
