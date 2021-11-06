@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     checkCapitalAnswer();
                 } else if (checkGameType() === "rivers") {
                     checkRiverAnswer();
+                } else if (checkGameType() === "mountains") {
+                    checkMountainAnswer();
                 }
                 // continue adding game types and check functions                               
             } else {
@@ -121,43 +123,69 @@ function runGame(gameType) {
     }
 
     function riversSub() {
+        
         let riversArr = getObjValues(countries, "river");
         console.log(riversArr);
         let correctRiver = correctObject;
-        
-        // Using shuffle function ArrElements to shuffle capitals array
+                
         shuffleArrElements(riversArr);
     
         console.log(riversArr);
     
-        // Limiting the array to two capitals
         let riversSub = riversArr.slice(0, 2);
     
         console.log(riversSub);
-    
-         // finding the opbject with the correct answer (capital) for the country given in the question
-    
-    
+                    
         console.log(correctRiver);
     
-        // Getting the correct answer (name of the capital) form the object
         correctRiver = correctRiver.river;
     
         console.log(correctRiver);
     
-        // Checking if the limited array already incluedes the correct answer/capital
         let checkSubArr = riversSub.includes(correctRiver);
     
         console.log(checkSubArr);
-    
-        // If the array does not include correct answer/capital, the correct answer is added to the array. If it's already present, third element from the shuffled capitals array is added instead
+           
         if (checkSubArr !== true) {
             riversSub.push(correctRiver);
         } else {
             riversSub.push(riversArr[2]);
         };
         return riversSub;
-        //console.log(riversSub);
+        
+    }
+
+    function mountainsSub() {
+        
+        let mountainsArr = getObjValues(countries, "mountain");
+        console.log(mountainsArr);
+        let correctMountain = correctObject;
+                
+        shuffleArrElements(mountainsArr);
+    
+        console.log(mountainsArr);
+    
+        let mountainsSub = mountainsArr.slice(0, 2);
+    
+        console.log(mountainsSub);
+                    
+        console.log(correctMountain);
+    
+        correctMountain = correctMountain.mountain;
+    
+        console.log(correctMountain);
+    
+        let checkSubArr = mountainsSub.includes(correctMountain);
+    
+        console.log(checkSubArr);
+           
+        if (checkSubArr !== true) {
+            mountainsSub.push(correctMountain);
+        } else {
+            mountainsSub.push(mountainsArr[2]);
+        };
+        return mountainsSub;
+        
     }
     
     let capitalsQuestion = 'Which city is the capital of ';
@@ -174,6 +202,9 @@ function runGame(gameType) {
     } else if (gameType === "rivers") {
         let newArray = riversSub();
         displayCapitalsQandA(riversQuestion, countryName, newArray);
+    } else if (gameType === "mountains") {
+        let newArray = mountainsSub();
+        displayCapitalsQandA(mountainsQuestion, countryName, newArray);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
@@ -299,7 +330,32 @@ function checkRiverAnswer() {
         
 }
 
+function checkMountainAnswer() {
+    
+    let selectedAnswer = getAnswersText();
 
+    let questionWord = document.getElementById("country-name").innerText;
+
+    let correctObject = countries.find(function(country, index) {
+        if(country.name === questionWord)
+        return true;
+    });
+
+    let corrMountValue = correctObject.mountain;
+    
+    if (selectedAnswer === corrMountValue) {
+        alert('Your answer is correct!');
+        incrementCorrectAnswer();
+        runGame('mountains');
+        } else {
+            alert(`Your answer is ${selectedAnswer}. The correct answer is ${corrMountValue}!`);
+            incrementWrongAnswer();
+            runGame('mountains');
+        };
+    
+    //uncheckRadio();
+        
+}
 
 
 function incrementCorrectAnswer() {
