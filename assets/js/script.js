@@ -477,7 +477,10 @@ function checkGameType() {
         }
 }
 
-//let checkedGame = checkGameType();
+function ucheckRadio() {
+    let radio = document.querySelector('input[type=radio][name=answers]:checked');
+    radio.checked = false;
+}
 
 
 function checkCapitalAnswer() {
@@ -497,14 +500,14 @@ function checkCapitalAnswer() {
         alert('Your answer is correct!');
         incrementCorrectAnswer();
         runGame('capitals');
+        ucheckRadio();
         } else {
             alert(`Your answer is ${selectedAnswer}. The correct answer is ${corrCapValue}!`);
             incrementWrongAnswer();
             runGame('capitals');
+            ucheckRadio();
         };
     
-    //uncheckRadio();
-        
 }
 
 function checkRiverAnswer() {
@@ -524,14 +527,14 @@ function checkRiverAnswer() {
         alert('Your answer is correct!');
         incrementCorrectAnswer();
         runGame('rivers');
+        ucheckRadio();
         } else {
             alert(`Your answer is ${selectedAnswer}. The correct answer is ${corrRivValue}!`);
             incrementWrongAnswer();
             runGame('rivers');
+            ucheckRadio();
         };
-    
-    //uncheckRadio();
-        
+            
 }
 
 function checkMountainAnswer() {
@@ -551,14 +554,14 @@ function checkMountainAnswer() {
         alert('Your answer is correct!');
         incrementCorrectAnswer();
         runGame('mountains');
+        ucheckRadio();
         } else {
             alert(`Your answer is ${selectedAnswer}. The correct answer is ${corrMountValue}!`);
             incrementWrongAnswer();
             runGame('mountains');
+            ucheckRadio();
         };
-    
-    //uncheckRadio();
-        
+            
 }
 
 function checkContinentAnswer() {
@@ -578,14 +581,14 @@ function checkContinentAnswer() {
         alert('Your answer is correct!');
         incrementCorrectAnswer();
         runGame('continents');
+        ucheckRadio();
         } else {
             alert(`Your answer is ${selectedAnswer}. The correct answer is ${corrContValue}!`);
             incrementWrongAnswer();
             runGame('continents');
+            ucheckRadio();
         };
-    
-    //uncheckRadio();
-        
+            
 }
 
 function incrementCorrectAnswer() {
