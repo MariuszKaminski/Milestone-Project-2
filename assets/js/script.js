@@ -139,6 +139,41 @@ let countries = [
         river: 'Karun',
         mountain: 'Mount Damavand',
         continent: 'Asia'
+    },
+    {
+        name: 'Algeria',
+        capital: 'Algiers',
+        river: 'Chelif',
+        mountain: 'Mount Tahat',
+        continent: 'Africa'
+    },
+    {
+        name: 'Democratic Republic of Kongo',
+        capital: 'Kinshasa',
+        river: 'Lualaba',
+        mountain: 'Mount Stanley',
+        continent: 'Africa'
+    },
+    {
+        name: 'Sudan',
+        capital: 'Khartoum',
+        river: 'Nile',
+        mountain: 'Deriba Caldera',
+        continent: 'Africa'
+    },
+    {
+        name: 'Nigeria',
+        capital: 'Abuja',
+        river: 'Niger River',
+        mountain: 'Chappal Waddi',
+        continent: 'Africa'
+    },
+    {
+        name: 'Kenya',
+        capital: 'Nairobi',
+        river: 'Tana River',
+        mountain: 'Mount Kenya',
+        continent: 'Africa'
     }
 ]
 
