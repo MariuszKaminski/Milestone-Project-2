@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 checkGameType();
                 if (checkGameType() === "capitals") {                
                     checkCapitalAnswer();
-                }                
+                }
+                // continue adding game types and check functions                               
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
