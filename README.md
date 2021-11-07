@@ -39,8 +39,8 @@ ___
 
 ## Introduction and Purpose
 
-This project has been created as Milestone One project for my Diploma Level 5 in Web Development, a course run by Harlow College in association with Code Institute. 
-In this document you will find the documentation, which accompanies a website that I have designed and developed for GYM4U, a fictional gym facility based on real life gym facilities operating in my local area.
+This project has been created as Milestone Two project for my Diploma Level 5 in Web Development, a course run by Harlow College in association with Code Institute. 
+In this file you will find documentation related to a web page containing a quiz with questions regarding geographical features of countries of the world such as capitals, longest rivers, tallest mountains as well as which continent they are situated in. The purpose of 'Geography Quiz' web page is educational as a resource for teachers and students for rehearsing material or for general public that would like check their general knowledge in the field of geography.
 
 ## Problem Statement
 
