@@ -97,6 +97,9 @@ which includes pop up messages informing the user whether the chosen answer is c
 
 ## Design Considerations
 
+### Design ideas:
+The design is primarily based on Code Institute’s “Love Maths” tutorial by Anna Greaves. It is true to say that have used the tutorial as a starting point, however while I was working on it and trying to addapt it to my ideas, I had to introduce extensive changes both to the appearance and the code. I have retained the idea of 4 buttons for different game types and the submit button for checking answers. The whole question area has been remodelled to be textbased with radio buttons to provide ansers instead of input boxes for numbers.  
+
 ### Colours
 The colours used for the design are in line with Gym4U brand colours which include the following:
 * teal (#008080) - for links buttons and backgrounds
@@ -106,9 +109,6 @@ The colours used for the design are in line with Gym4U brand colours which inclu
 
 ### Fonts
 For the text content the website utilizes Goole Font “Noto Sans”. Font size has been consistently maintained as 1.6em for h2 headings, 1.4em for important information and regular font (weight 400) for smaller print.
-
-### Design ideas:
-I have reused and adapted the idea of the semi-transparent cards on a photo background that can be found in Code Institute’s “Love Running” tutorial. This design has been applied to “Classes” and “Contact Us” homepage sections. Also the layout of the photographs in the Gallery page follows the example of masonry design principle from the same tutorial.
 
 ## Features
 
@@ -159,17 +159,15 @@ The code for the purpose of this project was written and edited in VSC then copi
 
 ## Technologies Used
 
-* [HTML5](https://en.wikipedia.org/wiki/HTML5) used to provide the site with content
-* [CSS3](https://en.wikipedia.org/wiki/CSS#CSS_3) used to style the HTML content
-* [Javascript](https://en.wikipedia.org/wiki/JavaScript) powering the Google Map in "Contact Us" Section
-* [Balsamiq](https://balsamiq.com/) used for the creation of wireframes for the site
-* [FreeLogo Design](https://www.freelogodesign.org/) a free online tool used to create Gym4U logo
-* [Google Chrome Developer tools](https://developer.chrome.com/docs/devtools/) used to test site responsiveness and to test code
-* [VSC](https://code.visualstudio.com/) for offline code writing
-* [Github](https://github.com/) used as the repository hosting service
-* [Gitpod](https://www.gitpod.io/) an online base code editor used for writing code and tracking changes
-* [Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) used to as a template for the creation of the project repository
-* [W3C Markup](https://validator.w3.org/) used for HTML validation
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) used to provide the site with content.
+* [CSS3](https://en.wikipedia.org/wiki/CSS#CSS_3) used to style the HTML content.
+* [Javascript](https://en.wikipedia.org/wiki/JavaScript) used to power the application features.
+* [Balsamiq](https://balsamiq.com/) used for the creation of wireframes for the site.
+* [Google Chrome Developer tools](https://developer.chrome.com/docs/devtools/) used to test site responsiveness and to test code.
+* [Github](https://github.com/) used as the repository hosting service.
+* [Gitpod](https://www.gitpod.io/) an online base code editor used for writing code and tracking changes.
+* [Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) used to as a template for the creation of the project repository.
+* [W3C Markup](https://validator.w3.org/) used for HTML validation.
 * [Jigsaw validation](https://jigsaw.w3.org/) used for CSS validation.
 
 ## Testing
