@@ -90,12 +90,12 @@ The customer - “GymForU” is a local independent gym who want to enhance thei
 
 ## Wireframes
 
-### Homepage
-![Desktop version](./assets/img/home_page.png)
+### Desktop version
+![Desktop version](./assets/imgages/Desktop-look.png)
 
-### Gallery
+### Mobile version
 
-![Desktop version](./assets/img/gallery.png)
+![Desktop version](./assets/images/Small-screen-look.png)
 
 ### Sign in / Sign up
 
