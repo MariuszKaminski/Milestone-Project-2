@@ -44,30 +44,28 @@ In this file you will find documentation related to a web page containing a quiz
 
 ## Problem Statement
 
-The customer - “GymForU” is a local independent gym who want to enhance their online presence by means of a custom build website. The page should provide prospective members with information on the offered range of services and establish an online hub for the existing community of members. The customer wants their website up and running within a period of one month. For this purpose they have allocated a budget of £2000.
+Design, implement and deploy an online resource that can be recommend by teachers to their pupils/students in the form of guestion and multiple choice answers Quiz. The questions and answers should be randomized and the set of answers should contain only one correct answer. The web page with the quiz needs to provide their users with feedback
+which includes pop up messages informing the user whether the chosen answer is correct or not. In the case of incorrect answer the pop-up should provide the users with a correct answer, so that some learning could occur. Additionally, the quiz web page should count the score for both correct and incorrect answers.
 
 ## Analysis
 
 ### Feasibility Study:
-1.	The custom built website would certainly be beneficial, as other ways of advertising may prove to be more expensive and not as efficient in the long run as a permanent interactive and responsive website would.
-2.	In the face of growing competition from gym chains and other locally run gyms and providing that the customer has at their disposal the funds needed, there is no reason to delay the development and deployment of the website.
-3.	The website will bring awareness of the facility and what they can offer helping to attract undecided prospective members from the local area and even further away.
+1.	As teaching and learning increasingly happens online. A custom built web application could provide a safe and hassle free way for the pupils/students to rehearse the material.
+2.	
  
 ### Functional Requirements
-1.	It must present introductory information about gym features that set it apart from other gyms in the area. It should include the full range of offered services.
-2.	It has to present a detailed weekly class schedule.
-3.	It has to provide information about the location, contact details and opening times.
-4.	It needs to have a “members area” where classes and other services could be booked and feedback provided.
-5.	It needs to have a “sign up” section where new members could express their interest in joining in as a member and book a taster session or induction.
-6.	The website should include a gallery which presents the facilities, the range of equipment available and the friendly social atmosphere during classes.
-7.	The website should point to all other social media sites that belong to the gym.
+1.	It must be functional on PCs and mobile devices.
+2.	It has to be intuitive and easy to navigate.
+3.	It has to test general knowlegde in the subject area of Geograhy.
+4.	It needs to provide ceratin variety.
+5.	It facilitate learning and entertain.
 
 ### Non-functional Requirements
-1.	Website completion deadline: 2nd of July, 2021
-2.	The website should comprise of no more than 3 web pages.
-3.	The webiste reflects the developer’s current skillset.
-4.	The website should promote the brand i.e. the company logo and the company colours (teal, black, grey and white)
-5.	The website aesthetically pleasing and provide good user experience.
+1.	Website completion deadline: 11th of November, 2021
+3.	The application should utilize HTML5, CSS3 and JavaSrcipt technologies.
+4.	The application should be easy to modify and expand.
+5.	The application should complement school's other online resources.
+6.	The web page/application should aesthetically pleasing and provide good user experience.
 
 ## User Experience 
 
@@ -96,10 +94,6 @@ The customer - “GymForU” is a local independent gym who want to enhance thei
 ### Mobile version
 
 ![Desktop version](./assets/images/Small-screen-look.png)
-
-### Sign in / Sign up
-
-![Desktop version](./assets/img/sign-in.png)
 
 ## Design Considerations
 
