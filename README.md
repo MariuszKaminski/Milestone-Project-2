@@ -103,15 +103,15 @@ The web application, in its entirety, utilizes Google Font “Ubuntu”. The col
 The buttons are a one of the key application features as they enable the user to change the type of game questions. The default game type that the aplication offers on loading the web page is "Capitals", however swiching to any of the other three reamining game types requires the user to click a corresponding button.
 
 ### Question area
-![Question area](./assets/images/question_and_answer_area.PNG)\
+![Question area](./assets/images/question-and-answer-area.PNG)\
 This area displays a quiz question relevant to the game type with randomly selected country name. Below the question the user is presented with a choice of three answers, one of which is correct. The user makes their selection by clicking a corresponding radio button.
 
 ### Submit button
-![Submit button](./assets/images/submit_button.PNG)
+![Submit button](./assets/images/submit-button.PNG)
 Once clicked, the submit button triggers a number of actions. Firstly, the answer is verified. Secondly, depending on whether the answer is correct or not, the user receives an appropriate pop up message and the score is adjusted. Lastly, a new question and answers of the same game type are generated. 
 
 ### Game score area
-![Game score area](./assets/images/score_area.PNG)
+![Game score area](./assets/images/score-area.PNG)
 This area keeps track of the user's progress by displaying the current number of correct and incorrect answers.
 
 ## Implementation and Coding
