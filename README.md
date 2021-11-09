@@ -93,7 +93,7 @@ The design is primarily based on Code Institute’s “Love Maths” tutorial by
 
 ### Design details
 
-The web application, in its entirety, utilizes Goole Font “Ubuntu”. The colour used for the game area background is ##00FFBF (aquamarine).
+The web application, in its entirety, utilizes Google Font “Ubuntu”. The colour used for the game area background is ##00FFBF (aquamarine).
 
 ## Features
 
