@@ -97,21 +97,21 @@ The web application, in its entirety, utilizes Google Font “Ubuntu”. The col
 
 ## Features
 
-### Game type change buttons
-![Navbar desktop version](./assets/img/navbar.PNG)
+### Game type buttons
+![Game type buttons](./assets/images/game-type-buttons.PNG)
 
 The buttons are a one of the key application features as they enable the user to change the type of game questions. The default game type that the aplication offers on loading the web page is "Capitals", however swiching to any of the other three reamining game types requires the user to click a corresponding button.
 
 ### Question area
-![Logo desktop version](./assets/img/gym4u_logo.png)\
+![Question area](./assets/images/question_and_answer_area.PNG)\
 This area displays a quiz question relevant to the game type with randomly selected country name. Below the question the user is presented with a choice of three answers, one of which is correct. The user makes their selection by clicking a corresponding radio button.
 
 ### Submit button
-![Classes section desktop version](./assets/img/classes_section.PNG)
+![Submit button](./assets/images/submit_button.PNG)
 Once clicked, the submit button triggers a number of actions. Firstly, the answer is verified. Secondly, depending on whether the answer is correct or not, the user receives an appropriate pop up message and the score is adjusted. Lastly, a new question and answers of the same game type are generated. 
 
 ### Game score area
-![Contact us section desktop version](./assets/img/contact_us_section.PNG)
+![Game score area](./assets/images/score_area.PNG)
 This area keeps track of the user's progress by displaying the current number of correct and incorrect answers.
 
 ## Implementation and Coding
