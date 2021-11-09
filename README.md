@@ -40,25 +40,25 @@ ___
 ## Introduction and Purpose
 
 This project has been created as Milestone Two project for my Diploma Level 5 in Web Development, a course run by Harlow College in association with Code Institute. 
-In this file you will find documentation related to a web page containing a quiz with questions regarding geographical features of countries of the world such as capitals, longest rivers, tallest mountains as well as which continent they are situated in. The purpose of 'Geography Quiz' web page is educational as a resource for teachers and students for rehearsing material or for general public that would like check their general knowledge in the field of geography.
+In this file you will find documentation related to a web application coded in Javascript called 'Geograpy Quiz'. The quiz aplication generates random questions about geographical features of countries such as their capitals, longest rivers, tallest mountains as well as which continent they are situated in. The purpose of 'Geography Quiz' web page is educational as a resource for teachers and students for rehearsing material or for general public that would like check their general knowledge in the field of geography.
 
 ## Problem Statement
 
-Design, implement and deploy an online resource that can be recommend by teachers to their pupils/students in the form of guestion and multiple choice answers Quiz. The questions and answers should be randomized and the set of answers should contain only one correct answer. The web page with the quiz needs to provide their users with feedback
+Design, implement and deploy an online resource that can be recommend by teachers to their pupils/students in the form of a quiz with guestions and multiple choice answers. The questions and answers should be randomized and the set of answers should contain only one correct answer. The web page with the quiz needs to provide their users with feedback
 which includes pop up messages informing the user whether the chosen answer is correct or not. In the case of incorrect answer the pop-up should provide the users with a correct answer, so that some learning could occur. Additionally, the quiz web page should count the score for both correct and incorrect answers.
 
 ## Analysis
 
 ### Feasibility Study:
 1.	As teaching and learning increasingly happens online. A custom built web application could provide a safe and hassle free way for the pupils/students to rehearse the material.
-2.	
+2. The quiz could be one of a growing number of online resources that the school would like to offer their students free of charge.	
  
 ### Functional Requirements
 1.	It must be functional on PCs and mobile devices.
 2.	It has to be intuitive and easy to navigate.
-3.	It has to test general knowlegde in the subject area of Geograhy.
+3.	It has to test general knowlegde in the subject area of Geography.
 4.	It needs to provide ceratin variety.
-5.	It facilitate learning and entertain.
+5.	It should facilitate learning and entertain.
 
 ### Non-functional Requirements
 1.	Website completion deadline: 11th of November, 2021
@@ -70,21 +70,12 @@ which includes pop up messages informing the user whether the chosen answer is c
 ## User Experience 
 
 ### Target Audience
-* New users - Individuals or groups of people who are looking for the right gym for them to meet and exercise together (check facilities, equipment, pricing, classes, personal training)
-* Returning users - gym members who want to book classes, upgade/downgrade membership, buy passes, leave feedback, get updates
+* Pupils/students - 
+* General public - 
 
 ### User Stories:
-* As a new user I can easily navigate the website
-* As a new user I can easily find pricing information
-* As a new user I can easily find personal training and classes information
-* As a new user I can check the location of the gym
-* As a new user I can contact the gym regarding any questions I have
-* As a new user I can find links to the gym's other social media pages that I can visit to gain even more information
-* As a new user I would like to be able to register as a member once I've made my decision to join the gym
-* As a returning user I can see information about personal trainers working for the gym
-* As a returning user I want to be able to book my classes as well as other services provided by the gym.
-* As a returning user I want to be able to manage my membership.
-* As a returning user I want to be able to leave feedback and get gym related updates.
+* As a pupil/student I can easily interact with the game.
+* As a accidental visitor I would like to test my general knowledge in the field of Geography
 
 ## Wireframes
 
@@ -98,59 +89,30 @@ which includes pop up messages informing the user whether the chosen answer is c
 ## Design Considerations
 
 ### Design ideas:
-The design is primarily based on Code Institute’s “Love Maths” tutorial by Anna Greaves. It is true to say that have used the tutorial as a starting point, however while I was working on it and trying to addapt it to my ideas, I had to introduce extensive changes both to the appearance and the code. I have retained the idea of 4 buttons for different game types and the submit button for checking answers. The whole question area has been remodelled to be textbased with radio buttons to provide ansers instead of input boxes for numbers.  
+The design is primarily based on Code Institute’s “Love Maths” tutorial by Anna Greaves. It is true to say that I have used the tutorial as a starting point, however while I was working on it and trying to addapt it to my ideas, I had to introduce extensive changes both to the appearance and the code. I have retained the idea of 4 buttons for different game types and the submit button for checking answers. The whole question area has been remodelled to be textbased with radio buttons to provide ansers instead of input boxes for numbers.  
 
-### Colours
-The colours used for the design are in line with Gym4U brand colours which include the following:
-* teal (#008080) - for links buttons and backgrounds
-* grey (#4a4a4f) - for backgrounds
-* black (#000000) - for fonts and backgrounds
-* white  (#FFFFFF) - for fonts and logo background
+### Design details
 
-### Fonts
-For the text content the website utilizes Goole Font “Noto Sans”. Font size has been consistently maintained as 1.6em for h2 headings, 1.4em for important information and regular font (weight 400) for smaller print.
+The web application, in its entirety, utilizes Goole Font “Ubuntu”. The colour used for the game area background is ##00FFBF (aquamarine).
 
 ## Features
 
-### Navbar
+### Game type change buttons
 ![Navbar desktop version](./assets/img/navbar.PNG)
 
-The navbar is displayed on all website pages and containing a small gym logo. It  provides links to “About”, “Classes” and “Contact “ homepage sections as well as to “Gallery” and  “Sign in/Sign up” pages within the website.
+The buttons are a one of the key application features as they enable the user to change the type of game questions. The default game type that the aplication offers on loading the web page is "Capitals", however swiching to any of the other three reamining game types requires the user to click a corresponding button.
 
-### Logo
+### Question area
 ![Logo desktop version](./assets/img/gym4u_logo.png)\
-Large-sized logo is prominently displayed at the homepage page with small-sized logo always visible on the navbar.
+This area displays a quiz question relevant to the game type with randomly selected country name. Below the question the user is presented with a choice of three answers, one of which is correct. The user makes their selection by clicking a corresponding radio button.
 
-### Classes Section
+### Submit button
 ![Classes section desktop version](./assets/img/classes_section.PNG)
-The classes section contains weekly class schedule with each day of the week on a separate semi-transparent card on a photo background.
+Once clicked, the submit button triggers a number of actions. Firstly, the answer is verified. Secondly, depending on whether the answer is correct or not, the user receives an appropriate pop up message and the score is adjusted. Lastly, a new question and answers of the same game type are generated. 
 
-### Contact Us Section
+### Game score area
 ![Contact us section desktop version](./assets/img/contact_us_section.PNG)
-This section contains four subsections providing: address, contact details, opening time and iframe with google map showing the gym’s exact location. The subsections are in the form of semi-transparent cards with the town’s photo as a background. All cards in the “Contact Us” section are accompanied with Fontawesome icons. This also applies to all homepage section headings.
-
-### Footer
-![Footer desktop version](./assets/img/footer.PNG)
-The footer, displayed on all pages, provides a basic copyright information and links to the gym’s social media sites in the form of Fontawesome icons.
-
-### Gallery
-![Gallery desktop version](./assets/img/gallery.PNG)
-The gallery comprises photos of different sizes grouped in 4 columns. The photos give a preview of gym’s facilities, equipment and available activities. The gallery follows the ‘masonry’ design principle.
-
-### Members Sign in Form
-![Sign in form desktop version](./assets/img/members_area.PNG)
-
-The form lists all extra benefits the members are entitled. It enables the members to log in by entering their log in details and pressing the “sign in” button.
-
-### New Members Sing up Form
-![Sign up form desktop version](./assets/img/new_members_sign_in.PNG)
-
-The purpose of the sign up form is to help the customers who have made a decision to join the gym to book an introductory session and create their member’s account at the website. For this reason some basic personal details need to be gathered from the form’s input fields.
-
-### Membership/Admission Pricing Table
-![Pricing table desktop version](./assets/img/membership_pricing.PNG)
-
-The purpose of the table is to present prospective customers with the whole range of flexible payment options for the gym’s services.
+This area keeps track of the user's progress by displaying the current number of correct and incorrect answers.
 
 ## Implementation and Coding
 
@@ -234,7 +196,7 @@ The work on this project helped to me to realize the importance of early plannin
 
 ## Credits
 
-### Sources for content:
+### Sources for code solutions:
 [BodyActiveGym](http://www.bodyactivegym.co.uk/) -text adapted for “About” and "What do we offer?" sections\
 [RippedGym Harlow](https://www.rippedgymharlow.co.uk/) -text adapted for “About” section and “Opening Times” card\
 [PureGym](https://www.puregym.com/gyms/harlow/timetable/) -class names in “Classes” section
@@ -270,4 +232,4 @@ The work on this project helped to me to realize the importance of early plannin
 * [Google Fonts](https://fonts.google.com/) -source for the fonts
 
 #### Design ideas:
-* [Code Institute](https://codeinstitute.net/) "Coder's Coffeehouse" and "Love Running" tutorials.
+* [Code Institute](https://codeinstitute.net/) "Love Maths" tutorial.
