@@ -70,8 +70,8 @@ which includes pop up messages informing the user whether the chosen answer is c
 ## User Experience 
 
 ### Target Audience
-* Pupils/students - 
-* General public - 
+* Pupils/students who have been referred to access the quiz by their teachers as an in-class activity or at home to aid their learning.
+* General public - anyone who wishes to check their facutal knowledge in the field of Geography.
 
 ### User Stories:
 * As a pupil/student I can easily interact with the game.
@@ -89,11 +89,11 @@ which includes pop up messages informing the user whether the chosen answer is c
 ## Design Considerations
 
 ### Design ideas:
-The design is primarily based on Code Institute’s “Love Maths” tutorial by Anna Greaves. It is true to say that I have used the tutorial as a starting point, however while I was working on it and trying to addapt it to my ideas, I had to introduce extensive changes both to the appearance and the code. I have retained the idea of 4 buttons for different game types and the submit button for checking answers. The whole question area has been remodelled to be textbased with radio buttons to provide ansers instead of input boxes for numbers.  
+The design is primarily based on Code Institute’s “Love Maths” tutorial by Anna Greaves. It is true to say that I have used the tutorial as a starting point, however while I was working on it and trying to addapt it to my ideas, I had to introduce extensive changes both to the appearance and the code. I have retained the idea of 4 buttons for different game types and the submit button for checking answers. The whole question area has been remodelled to be textbased with radio buttons used to provide ansers instead of input boxes for numbers.  
 
 ### Design details
 
-The web application, in its entirety, utilizes Google Font “Ubuntu”. The colour used for the game area background is ##00FFBF (aquamarine).
+The web application, in its entirety, utilizes Google Font “Ubuntu”. The colour used for the game area background is ##00FFBF (aquamarine) while the logo next to heading is a clipart sourced from ClipartPanda (http://www.clipartpanda.com/clipart_images/clip-art-geography-17521220).
 
 ## Features
 
@@ -116,7 +116,7 @@ This area keeps track of the user's progress by displaying the current number of
 
 ## Implementation and Coding
 
-The code for the purpose of this project was written and edited in VSC then copied to GitPod. The website’s structure and content is delivered by means of HTML while visual styling and positioning is achieved by means of CSS. I have aimed to write and space the code in orderly neat manner and provide helpful comments, which is a good practice recommended by Code Institute in their learning tutorials. I also applied class names that hint at their own function. All of this to enhance the readability of the code to other people who might be reviewing it.
+The entriety of code for the purpose of this project has been in GitPod. The web page structure and content is delivered by means of HTML while visual styling, positioning and responsivnes to diffrent screen sizes is achieved by means of CSS. JavaScript code has been employed to turn the Quiz page into a web based application that responds accordingly to the user's actions. I have aimed to write and space the code in orderly neat manner and provide helpful comments, which is a good practice recommended by Code Institute in their learning tutorials. This applies to both CSS and Javascript files where appropriate class names or function names have been used that hint at their purpose. All of this to enhance the readability of the code to other people who might be reviewing it.
 
 
 ## Technologies Used
@@ -133,39 +133,30 @@ The code for the purpose of this project was written and edited in VSC then copi
 * [Jigsaw validation](https://jigsaw.w3.org/) used for CSS validation.
 
 ## Testing
-1. As a new user I can easily navigate the website.
+1. As a new user I can easily gues how it works.
 * Result: PASSED
-  * The website has a navbar with links to homepage sections and other website pages that can be accessed from every website page.
-2. As a new user I can easily find pricing information.
+  * The application has a straightforward look that resembles standard multipulple choice tests.
+2. The user can easily swich to a different game type.
 * Result: PASSED
-  * There is an easy to follow extensive pricing offer provided in the form of a table.
-3. As a new user I can easily find personal training and classes information.
-* Result: PARTIAL PASS
-  * There is a weekly class schedule and offered services information provided for everyone, however more detailed information about particular personal trainers is only available after sign up.
-4. As a new user I can check the the location of the gym.
+  * Pressing each of the button does ruesult in a change of queston type.
+3. The user can be sure that one of the answers provided is correct.
+* Result: PASS
+  * The code ensures that one of the answers is correct in realtion to the country mentioned in the question.
+4. The user gets pop up messages stating whether the selected anwer is correct or incorrect.
 * Result: PASSED
-  * The website provides both the address and an embedded Google Map showing gym's exact location.
-5. As a new user I can contact the gym regarding any questions I have.
+  * Pressing the submit button does result in displaying  a relevant message.
+5. In case of incorrect answer, the user gets a hint what the correct answer is.
 * Result: PASSED
-  * The website provides contact details for enquiries.
-6. As a new user I can find links to the gym's other social media pages that I can visit to gain even more information.
+  * Selecting incorrect answer and pressing the submit button does display a message with correct answer.
+6. The user can see their progress represented by numbers of correct and incorrect answers given.
 * Result: PASSED
-  * The social media links are provided in the footer and can be accessed from every website page
-7. As a new user I would like to be able to register as a member once I've made my decision to join the gym.
+  * The application does update the score by increasing either the number of correct answers of incorrect ones. 
+7. After answering a guestion the user gets a new question that differs from the previous one.
+* Result: PARTIALLY PASSED
+  * The application will generate a new question, however due to the limited number of countires in the applictation's array (which is 28) there is a slight chance a given country might be repeated.
+8. The radio button checked by the user will be unchecked before a new question is generated.
 * Result: PASSED
-  * The website has a separate form where a person wishing to join the gym can leave their details to book an induction.
-8. As a returning user I can see information about personal trainers working for the gym
-* Result: PASSED
-  * This function becomes available after joining the gym and can be accessed after logging into a members account in the "Member's area" section.
-9. As a returning user I want to be able to book my classes as well as other services provided by the gym.
-* Result: PASSED
-  * This function becomes available after joining the gym and can be accessed after logging into a members account in the "Member's area" section.
-10. As a returning user I want to be able to manage my membership.
-* Result: PASSED
-  * This function becomes available after joining the gym and can be accessed after logging into a members account in the "Member's area" section.
-11. As a returning user I want to be able to leave feedback and get gym related updates.
-* Result: PASSED
-  * This function becomes available after joining the gym and can be accessed after loging into a members account in the "Member's area" section.
+  * The application does automatically uncheck radio buttons before generating new question.
 
 ## Validation
 
