@@ -1,3 +1,4 @@
+// Countries array with objects and elemnets for queestions and answers
 
 let countries = [
     {
@@ -227,13 +228,18 @@ document.addEventListener("DOMContentLoaded", function() {
     runGame("capitals");
 
 });
-// Code for choosing a random country name from the countries array to be inserted into the question
 
+/* *
+ *  Code for choosing a random country name from the countries array to be inserted into the question
+ * Code source: https://stackoverflow.com/questions/37167264/javascript-output-random-object-from-array-of-objects
+ * */ 
 function randomCountry() {
     let randomObject = Math.floor(Math.random() * 28);
     let randomCountry = countries[randomObject].name;
     return randomCountry;
 }
+
+// Main game loop
 
 function runGame(gameType) {
     
@@ -245,9 +251,10 @@ function runGame(gameType) {
     return true;
     });
     
+    //Function for creating capitals array in the capitals game
+
     function capitalsSub() {
         let capitalsArr = getObjValues(countries, "capital");
-        console.log(capitalsArr);
         let correctCapital = correctObject;
         
         // Using shuffle function ArrElements to shuffle capitals array
@@ -257,24 +264,13 @@ function runGame(gameType) {
     
         // Limiting the array to two capitals
         let capitalsSub = capitalsArr.slice(0, 2);
-    
-        console.log(capitalsSub);
-    
-         // finding the opbject with the correct answer (capital) for the country given in the question
-    
-    
-        console.log(correctCapital);
-    
+               
         // Getting the correct answer (name of the capital) form the object
         correctCapital = correctCapital.capital;
     
-        console.log(correctCapital);
-    
-        // Checking if the limited array already incluedes the correct answer/capital
+        // Checking if the limited array already includes the correct answer/capital
         let checkSubArr = capitalsSub.includes(correctCapital);
-    
-        console.log(checkSubArr);
-    
+        
         // If the array does not include correct answer/capital, the correct answer is added to the array. If it's already present, third element from the shuffled capitals array is added instead
         if (checkSubArr !== true) {
             capitalsSub.push(correctCapital);
@@ -413,10 +409,13 @@ function runGame(gameType) {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
-    //randomCountry();
+    
 }
 
-
+/**
+ * Function for extracting arrays from object property values
+ * Code source: https://stackoverflow.com/questions/19590865/from-an-array-of-objects-extract-value-of-a-property-as-array
+ **/
 
 function getObjValues(input, field) {
     let output = [];
@@ -425,6 +424,11 @@ function getObjValues(input, field) {
     return output;
 }
 
+/**
+ * Function for random shuffling an array
+ * Code source: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+**/
+
 function shuffleArrElements(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -432,8 +436,10 @@ function shuffleArrElements(array) {
     }
 }
 
-
-//Function to get selected answer text
+/**
+ * Function for gettin selected radio button answer text
+ * Code source: https://stackoverflow.com/questions/14709617/how-do-i-get-the-label-of-the-selected-radio-button-using-javascript
+ **/ 
 function getAnswersText() {
     
     let radioes = document.getElementsByName('answers');
@@ -447,8 +453,11 @@ function getAnswersText() {
             }
         }
 }
+/**
+ * Event handler for radio buttons
+ * Code source: https://stackoverflow.com/questions/8922002/attach-event-listener-through-javascript-to-radio-button
+ */
 
-//Event handler for radio buttons
 let radioes = document.forms[0].elements['answers'];
     for (radio in radioes) {
         radioes[radio].onclick = function() {
