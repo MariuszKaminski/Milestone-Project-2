@@ -278,7 +278,7 @@ function runGame(gameType) {
             capitalsSub.push(correctCapital);
         } else {
             capitalsSub.push(capitalsArr[2]);
-        };
+        }
         return capitalsSub;
         
     }
@@ -301,7 +301,7 @@ function runGame(gameType) {
             riversSub.push(correctRiver);
         } else {
             riversSub.push(riversArr[2]);
-        };
+        }
         return riversSub;
         
     }
@@ -324,7 +324,7 @@ function runGame(gameType) {
             mountainsSub.push(correctMountain);
         } else {
             mountainsSub.push(mountainsArr[2]);
-        };
+        }
         return mountainsSub;
         
     }
@@ -354,7 +354,7 @@ function runGame(gameType) {
             continentsSub.push(correctContinent);
         } else {
             continentsSub.push(nonDuplicateContArr[2]);
-        };
+        }
         return continentsSub;
         
     }
