@@ -175,6 +175,8 @@ Pasting the code into W3C Markup Validation Service has returned the following r
 * style.css\
 ![CSS validation results](./assets/img/css-validation-results.PNG)
 
+### JavaScript
+
 ## Deployment
 After final commit to Git via Gipod, the website has been deployed online at Git Pages through a standard GitHub procedure. Below are the steps taken:\
 <br>
