@@ -1,6 +1,6 @@
 // Countries array with objects and elemnets for queestions and answers
 
-let countries = [
+var countries = [
     {
         name: 'France',
         capital: 'Paris',

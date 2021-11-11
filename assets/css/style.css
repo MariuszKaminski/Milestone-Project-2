@@ -80,7 +80,7 @@ body {
     }
 
     .game-btn {
-        margin: 5 10px;
+        margin: 5px 10px;
         padding: 5px;
         border: 1px solid;
         height: 50px;
@@ -142,7 +142,7 @@ body {
     }
 
     .game-btn {
-        margin: 5 10px;
+        margin: 5px 10px;
         padding: 5px;
         border: 1px solid;
         width: 100px;
@@ -194,6 +194,4 @@ body {
     .submit {
         margin: 10px;
     }
-}
-
 }
