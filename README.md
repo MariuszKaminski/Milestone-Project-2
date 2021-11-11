@@ -188,39 +188,27 @@ The work on this project helped to me to realize the importance of early plannin
 ## Credits
 
 ### Sources for code solutions:
-[BodyActiveGym](http://www.bodyactivegym.co.uk/) -text adapted for “About” and "What do we offer?" sections\
-[RippedGym Harlow](https://www.rippedgymharlow.co.uk/) -text adapted for “About” section and “Opening Times” card\
-[PureGym](https://www.puregym.com/gyms/harlow/timetable/) -class names in “Classes” section
 
-### Sources for photos:
+[Code Institute](https://codeinstitute.net/)
+* [Love Maths Tutorial](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode)
 
-#### The outside view of the gym building from "About" Section
-[gym_outside.jpg](https://1.bp.blogspot.com/-axCdPQ-UPj0/X47-VYIrSaI/AAAAAAAAW9M/9sP8mzMdCdYtBFDWlV__MR6jztnECOl1wCLcBGAsYHQ/s800/40023.jpg) This photo originates from [The Door Industry Journal](https://blog.doorindustryjournal.co.uk)
+[Stack Overflow](https://stackoverflow.com/)
+* [JavaScript - Output random OBJECT from array of objects](https://stackoverflow.com/questions/37167264/javascript-output-random-object-from-array-of-objects)
+* [From an array of objects, extract value of a property as array](https://stackoverflow.com/questions/19590865/from-an-array-of-objects-extract-value-of-a-property-as-array)
+* [How to randomize (shuffle) a JavaScript array?](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+* [How do I get the label of the selected radio button using javascript](https://stackoverflow.com/questions/14709617/how-do-i-get-the-label-of-the-selected-radio-button-using-javascript)
+* [Attach event listener through javascript to radio button](https://stackoverflow.com/questions/8922002/attach-event-listener-through-javascript-to-radio-button)
 
-#### Backgrounds:
-[gym-about.jpg](https://unsplash.com/photos/CQfNt66ttZM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[sign_up_background.jpg](https://unsplash.com/photos/wTcD3MwL_VY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[classes-background.jpg](https://unsplash.com/photos/y0SMHt74yqc?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[saffron_walden.jpg](https://promotemyplacecdn.azureedge.net/cache/4/b/8/8/5/9/4b8859073357c1d5f901fa61144f97461a861ce5.jpg) This photo originates form [Saffron Walden Initiative](http://www.swinitiative.org/) website.
+[JavaScript Tutorial](https://www.javascripttutorial.net/)
+* [Remove Duplicates from an Array](https://www.javascripttutorial.net/array/javascript-remove-duplicates-from-array/)
 
-#### Gallery photos:
-[cycle-area.jpg](https://unsplash.com/photos/dDp-6pXrYik?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[treadmill-area.jpg](https://unsplash.com/photos/m27OTMegUyA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[weights-area.jpg](https://unsplash.com/photos/nV7WA07ikI4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[exercise-machinges.jpg](https://unsplash.com/photos/0sa8D74iodI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[exercise1.jpg](https://images.pexels.com/photos/2247179/pexels-photo-2247179.jpeg?cs=srgb&dl=pexels-the-lazy-artist-gallery-2247179.jpg&fm=jpg) (Pexels)\
-[exercise2.jpg](https://unsplash.com/photos/wXBK9JrM0iU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[exercise3.jpg](https://images.pexels.com/photos/6551133/pexels-photo-6551133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) (Pexels)\
-[classes1.jpg](https://unsplash.com/photos/NbpUM86Jo8Y?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[classes2.jpg](https://unsplash.com/photos/yNPTXNYVfmw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[classes3.jpg](https://unsplash.com/photos/wy_L8W0zcpI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) (Unsplash)\
-[man_lifting.jpg](https://www.pexels.com/pl-pl/zdjecie/osoba-podnoszaca-sztange-w-pomieszczeniu-2261485/) (Pexels)\
-[juice_bar.jpg](https://mk0lavidaliverp84l6x.kinstacdn.com/wp-content/uploads/2019/09/TEL7-750x430.jpg) and 
-[healty_food.jpg](https://mk0lavidaliverp84l6x.kinstacdn.com/wp-content/uploads/2019/09/TEL2-750x430.jpg) These photos originate from the article [TEL ISLAND: HEALTHY FOOD IN THE HEART OF HESWALL!](https://www.lavidaliverpool.co.uk/tel-island-healthy-food-heart-heswall/) at [la vida liverpool](https://www.lavidaliverpool.co.uk/). 
+[Techie Delight](https://www.techiedelight.com/)
+* [Uncheck a radio button with JavaScript/jQuery](https://www.techiedelight.com/uncheck-radio-button-javascript/)
 
-#### Libraries:
-* [Font Awesome](https://fontawesome.com/) -source for the icons
-* [Google Fonts](https://fonts.google.com/) -source for the fonts
+[Useful Angle](https://usefulangle.com/)
+* [How to Search in an Array of Objects with Javascript](https://usefulangle.com/post/3/javascript-search-array-of-objects)
 
-#### Design ideas:
-* [Code Institute](https://codeinstitute.net/) "Love Maths" tutorial.
+### Design ideas:
+
+[Code Institute](https://codeinstitute.net/)
+* [Love Maths Tutorial](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode)
