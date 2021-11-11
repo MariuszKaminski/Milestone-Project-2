@@ -95,7 +95,7 @@ The design is primarily based on Code Institute’s “Love Maths” tutorial by
 
 ### Design details
 
-The web application, in its entirety, utilizes Google Font “Ubuntu”. The colour used for the game area background is ##00FFBF (aquamarine) while the logo next to heading is a clipart sourced from ClipartPanda (http://www.clipartpanda.com/clipart_images/clip-art-geography-17521220).
+The web application, in its entirety, utilizes Google Font “Ubuntu”. The colour used for the game area background is ##00FFBF (aquamarine) while the logo next to heading is a [clipart](http://www.clipartpanda.com/clipart_images/clip-art-geography-17521220) sourced from [ClipartPanda](http://www.clipartpanda.com/).
 
 ## Features
 
