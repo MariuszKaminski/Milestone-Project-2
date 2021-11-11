@@ -184,8 +184,7 @@ The web application is now publicly accessible at this URL address: https://mari
  
 ## Evaluation
 
-As stated before the starting point for this project was Code Institute Love Maths walkthrough, however my own idea of changing the subject of the game from mathematics to geography proved to be very challenging. Firstly, the code had to be extensively modified to deal with arrays, objects and arrays of objects instead of numbers. Secondly, using radio buttons for selecting text based answers presented its own challenges. What is more, ensuring that one of the answers is correct and avoiding repetitions also required 
-While the work on the project has been frustrating at times, it has been a good exercise in problem solving.
+As stated before, the starting point for this project was Code Institute Love Maths walkthrough, however my own idea of changing the subject of the game from mathematics to geography, simeple as it may have sounded, in the end, proved to be very challenging. Firstly, the code had to be extensively modified to deal with arrays, objects and arrays of objects instead of numbers. Secondly, using radio buttons for selecting text based answers presented its own set of challenges. Also, ensuring that one of the answers is correct and avoiding repetitions required coming up with new functions not included in the original walkthrough. On the more critical note, I realise that more could have been done to improve the visual appeal of the app and the code might be streamlined by the use of arrow functions and ternary operators. On the whole, while the work on the project has been frustrating at times, it has also been a good exercise in problem solving.
 
 ## Credits
 
