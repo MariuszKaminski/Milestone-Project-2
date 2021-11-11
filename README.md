@@ -161,16 +161,17 @@ The entriety of code for the purpose of this project has been in GitPod. The web
 ## Validation
 
 ### HTML
-Pasting the code into W3C Markup Validation Service has returned the following result:
-* index.html
-![Index.html validation results](./assets/img/html-validation-results-index.PNG)
+Pasting the code into [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) has returned the following result:
+* index.html <br>
+![Index.html validation results](./assets/images/html-validation-result.PNG)
 
 ### CSS
-Pasting the code into W3C Markup Validation Service has returned the following results:
-* style.css
-![CSS validation results](./assets/img/css-validation-results.PNG)
+Pasting the code into [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) has returned the following results:
+* style.css <br>
+![CSS validation results](./assets/images/css-validation-result.PNG)
 
 ### JavaScript
+I have also attempted to validate the javascript code through [ValidateJavaScript](https://validatejavascript.com). However, this resulted in a long list of errors that do not appear to prevent the code from functioning properly. Similar errors appear to exist in the original "Love Maths" javacript code and, in my belief, they might be caused Code Institute being more up to date with the new developments in JavaScript or trying to simplify the process of learning.
 
 ## Deployment
 After final commit to Git via Gipod, the website has been deployed online at Git Pages through a standard GitHub procedure. Below are the steps taken:\
