@@ -173,17 +173,19 @@ Pasting the code into [W3C CSS Validation Service](https://jigsaw.w3.org/css-val
 ![CSS validation results](./assets/images/css-validation-result.PNG)
 
 ### JavaScript
-I have also attempted to validate the javascript code through [ValidateJavaScript](https://validatejavascript.com). However, this resulted in a long list of errors that do not appear to prevent the code from functioning properly. Similar errors appear to exist in the original "Love Maths" javacript code and, in my belief, they might be caused Code Institute being more up to date with the new developments in JavaScript or trying to simplify the process of learning.
+I have also attempted to validate the javascript code through [ValidateJavaScript](https://validatejavascript.com). However, this resulted in a long list of errors that do not appear to prevent the code from functioning properly. Similar errors appear to exist in the original "Love Maths" javacript code and, in my belief, they might be the result of Code Institute being more up to date with the new developments in JavaScript or trying to simplify the process of learning.
 
 ## Deployment
 After final commit to Git via Gipod, the website has been deployed online at Git Pages through a standard GitHub procedure. Below are the steps taken:\
 <br>
-Enter the Github repository “Project Milestone 1” -> Settings -> Pages ->Source-> (branch) Master-> (folder) /root-> Save 
+Enter the Github repository “Project Milestone 2” -> Settings -> Pages ->Source-> (branch) Master-> (folder) /root-> Save
+<br>
+The web application is now publicly accessible at this URL address: https://mariuszkaminski.github.io/Milestone-Project-2/
  
 ## Evaluation
 
-While reflecting on the achieved outcome, it its present form the website does not provide the functionality required by the customer. The site would benefit from greater responsiveness which can be achieved with Bootstrap library, the inclusion of which was optional in Milestone Project 1. The forms would need to employ appropriate scripts to work, which is currently beyond the developer's skillset. Some of the pages might appear overloaded; therefore the website could also benefit from at least one more page (perhaps a separate page for pricing). These are features that could be included in future updates.\
-The work on this project helped to me to realize the importance of early planning stages and good initial design. In my future projects I will be striving to achieve greater simplicity and functionality in order to provide the best possible user experience.
+As stated before the starting point for this project was Code Institute Love Maths walkthrough, however my own idea of changing the subject of the game from mathematics to geography proved to be very challenging. Firstly, the code had to be extensively modified to deal with arrays, objects and arrays of objects instead of numbers. Secondly, using radio buttons for selecting text based answers presented its own challenges. What is more, ensuring that one of the answers is correct and avoiding repetitions also required 
+While the work on the project has been frustrating at times, it has been a good exercise in problem solving.
 
 ## Credits
 
