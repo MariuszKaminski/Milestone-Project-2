@@ -1,3 +1,5 @@
+![Am I responsive?](./assets/images/am-I-responsive.PNG)
+
 # Geography Quiz
 
 Link to the project: https://github.com/MariuszKaminski/Milestone-Project-2/
