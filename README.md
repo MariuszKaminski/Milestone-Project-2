@@ -161,18 +161,13 @@ The entriety of code for the purpose of this project has been in GitPod. The web
 ## Validation
 
 ### HTML
-Pasting the code into W3C Markup Validation Service has returned the following results for each of the pages:
+Pasting the code into W3C Markup Validation Service has returned the following result:
 * index.html
 ![Index.html validation results](./assets/img/html-validation-results-index.PNG)
-* gallery.html
-![Index.html validation results](./assets/img/html-validation-results-gallery.PNG)
-* sign-up.html
-![Index.html validation results](./assets/img/html-validation-results-sign-up.PNG)
-All the above errors have been correncted. The service's recommendation to introduce h1-h6 elements into the section of "gallery.htm" is not applicable as the only content on the page are photos. 
 
 ### CSS
 Pasting the code into W3C Markup Validation Service has returned the following results:
-* style.css\
+* style.css
 ![CSS validation results](./assets/img/css-validation-results.PNG)
 
 ### JavaScript
