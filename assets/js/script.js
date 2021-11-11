@@ -200,7 +200,11 @@ let countries = [
 ]
 
 
-// Event listener for game type
+/**
+ * Event listener for the game type
+ * Code Source: https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode/blob/master/05-tidying-up/01-a-few-last-things/assets/js/script.js
+ */ 
+
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -259,9 +263,7 @@ function runGame(gameType) {
         
         // Using shuffle function ArrElements to shuffle capitals array
         shuffleArrElements(capitalsArr);
-    
-        console.log(capitalsArr);
-    
+                
         // Limiting the array to two capitals
         let capitalsSub = capitalsArr.slice(0, 2);
                
@@ -278,33 +280,23 @@ function runGame(gameType) {
             capitalsSub.push(capitalsArr[2]);
         };
         return capitalsSub;
-        //console.log(capitalsSub);
+        
     }
 
     function riversSub() {
         
         let riversArr = getObjValues(countries, "river");
-        console.log(riversArr);
+        
         let correctRiver = correctObject;
                 
         shuffleArrElements(riversArr);
-    
-        console.log(riversArr);
-    
+                
         let riversSub = riversArr.slice(0, 2);
     
-        console.log(riversSub);
-                    
-        console.log(correctRiver);
-    
         correctRiver = correctRiver.river;
-    
-        console.log(correctRiver);
-    
+            
         let checkSubArr = riversSub.includes(correctRiver);
-    
-        console.log(checkSubArr);
-           
+                   
         if (checkSubArr !== true) {
             riversSub.push(correctRiver);
         } else {
@@ -317,26 +309,16 @@ function runGame(gameType) {
     function mountainsSub() {
         
         let mountainsArr = getObjValues(countries, "mountain");
-        console.log(mountainsArr);
+    
         let correctMountain = correctObject;
                 
         shuffleArrElements(mountainsArr);
-    
-        console.log(mountainsArr);
-    
+            
         let mountainsSub = mountainsArr.slice(0, 2);
-    
-        console.log(mountainsSub);
-                    
-        console.log(correctMountain);
-    
+        
         correctMountain = correctMountain.mountain;
-    
-        console.log(correctMountain);
-    
+            
         let checkSubArr = mountainsSub.includes(correctMountain);
-    
-        console.log(checkSubArr);
            
         if (checkSubArr !== true) {
             mountainsSub.push(correctMountain);
@@ -350,31 +332,23 @@ function runGame(gameType) {
     function continentsSub() {
         
         let continentsArr = getObjValues(countries, "continent");
-        console.log(continentsArr);
 
-        //function to remove duplicate continents from the array
+        /**
+         * Function to remove duplicate continents from the array
+         * Code source: https://www.javascripttutorial.net/array/javascript-remove-duplicates-from-array/
+        */
+
         let nonDuplicateContArr = [...new Set(continentsArr)];
-        console.log(nonDuplicateContArr);
 
         let correctContinent = correctObject;
         
         shuffleArrElements(nonDuplicateContArr);
     
-        console.log(nonDuplicateContArr);
-    
         let continentsSub = nonDuplicateContArr.slice(0, 2);
-    
-        console.log(continentsSub);
-                    
-        console.log(correctContinent);
     
         correctContinent = correctContinent.continent;
     
-        console.log(correctContinent);
-    
         let checkSubArr = continentsSub.includes(correctContinent);
-    
-        console.log(checkSubArr);
            
         if (checkSubArr !== true) {
             continentsSub.push(correctContinent);
@@ -486,6 +460,11 @@ function checkGameType() {
         }
 }
 
+/**
+ * Function for unchecking radio buttons
+ * Code source: https://www.techiedelight.com/uncheck-radio-button-javascript/
+ */
+
 function ucheckRadio() {
     let radio = document.querySelector('input[type=radio][name=answers]:checked');
     radio.checked = false;
@@ -497,7 +476,12 @@ function checkCapitalAnswer() {
     let selectedAnswer = getAnswersText();
 
     let questionWord = document.getElementById("country-name").innerText;
-
+    
+    /**
+     * Function for getting whole country object for the country appearing in the question. Property value from this object is then compared with selected answer to verify if the ansswer is correct or not.
+     * Code source: https://usefulangle.com/post/3/javascript-search-array-of-objects
+     */
+    
     let correctObject = countries.find(function(country, index) {
         if(country.name === questionWord)
         return true;
@@ -600,6 +584,11 @@ function checkContinentAnswer() {
             
 }
 
+/**
+ * Functions for recording the score
+ * Code source: https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode/blob/master/05-tidying-up/01-a-few-last-things/assets/js/script.js
+ */
+
 function incrementCorrectAnswer() {
 
     let oldScore = parseInt(document.getElementById("correct").innerText);
@@ -612,7 +601,12 @@ function incrementWrongAnswer() {
     document.getElementById("incorrect").innerText = ++oldScore;
 
 }
-// function displaying game question and answers
+
+/**
+ * Function displaying game question and answers
+ * Code source: https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode/blob/master/05-tidying-up/01-a-few-last-things/assets/js/script.js
+ */ 
+
 function displayCapitalsQandA(question, element, array) {
     document.getElementById('question').textContent = question;
     document.getElementById('country-name').textContent = element;
