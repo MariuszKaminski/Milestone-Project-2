@@ -72,7 +72,8 @@ which includes pop up messages informing the user whether the chosen answer is c
 ## User Experience 
 
 ### Target Audience
-* Pupils/students who have been referred to access the quiz by their teachers as an in-class activity or at home to aid their learning.
+* Geography teachers looking for additional teaching resources.
+* Pupils/students who have been recommended the quiz by their teachers as an in-class activity or at home to aid their learning.
 * General public - anyone who wishes to check their factual knowledge in the field of Geography.
 
 ### User Stories:
