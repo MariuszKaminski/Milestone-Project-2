@@ -42,18 +42,18 @@ ___
 ## Introduction and Purpose
 
 This project has been created as Milestone Two project for my Diploma Level 5 in Web Development, a course run by Harlow College in association with Code Institute. 
-In this file you will find documentation related to a web application coded in Javascript called 'Geograpy Quiz'. The quiz aplication generates random questions about geographical features of countries such as their capitals, longest rivers, tallest mountains as well as which continent they are situated in. The purpose of 'Geography Quiz' web page is educational as a resource for teachers and students for rehearsing material or for general public that would like check their general knowledge in the field of geography.
+In this file you will find documentation related to a web application coded in JavaScript called 'Geograpy Quiz'. The quiz aplication generates random questions about geographical features of countries such as their capitals, longest rivers, tallest mountains as well as continent they are situated in. The purpose of "Geography Quiz" web application is educational. It can serve as a resource for teachers and students for rehearsing material. Apart from students it can be used by who would like check their general knowledge in the field of geography.
 
 ## Problem Statement
 
-Design, implement and deploy an online resource that can be recommend by teachers to their pupils/students in the form of a quiz with guestions and multiple choice answers. The questions and answers should be randomized and the set of answers should contain only one correct answer. The web page with the quiz needs to provide their users with feedback
+Design, implement and deploy an online resource that can be recommend by teachers to their pupils/students in the form of a quiz with guestions and multiple choice answers. The questions and answers should be randomized and the set of answers should contain only one correct answer. The web page with the quiz needs to provide its users with feedback
 which includes pop up messages informing the user whether the chosen answer is correct or not. In the case of incorrect answer the pop-up should provide the users with a correct answer, so that some learning could occur. Additionally, the quiz web page should count the score for both correct and incorrect answers.
 
 ## Analysis
 
 ### Feasibility Study:
-1.	As teaching and learning increasingly happens online. A custom built web application could provide a safe and hassle free way for the pupils/students to rehearse the material.
-2. The quiz could be one of a growing number of online resources that the school would like to offer their students free of charge.	
+1.	As teaching and learning increasingly happens online, a custom built web application could provide a safe and hassle free way for the pupils/students to rehearse the material.
+2. The quiz could be one of a growing number of online resources that a school could offer their students to use free of charge.	
  
 ### Functional Requirements
 1.	It must be functional on PCs and mobile devices.
@@ -73,11 +73,12 @@ which includes pop up messages informing the user whether the chosen answer is c
 
 ### Target Audience
 * Pupils/students who have been referred to access the quiz by their teachers as an in-class activity or at home to aid their learning.
-* General public - anyone who wishes to check their facutal knowledge in the field of Geography.
+* General public - anyone who wishes to check their factual knowledge in the field of Geography.
 
 ### User Stories:
 * As a pupil/student I can easily interact with the game.
-* As a accidental visitor I would like to test my general knowledge in the field of Geography
+* As a accidental visitor I would like to test my general knowledge in the field of Geography.
+* As a teacher I'd like to provide my pupil/students with a simple and entertaining activity that will develop and test their knowledge in the filed of Geography.
 
 ## Wireframes
 
@@ -91,7 +92,7 @@ which includes pop up messages informing the user whether the chosen answer is c
 ## Design Considerations
 
 ### Design ideas:
-The design is primarily based on Code Institute’s “Love Maths” tutorial by Anna Greaves. It is true to say that I have used the tutorial as a starting point, however while I was working on it and trying to addapt it to my ideas, I had to introduce extensive changes both to the appearance and the code. I have retained the idea of 4 buttons for different game types and the submit button for checking answers. The whole question area has been remodelled to be textbased with radio buttons used to provide ansers instead of input boxes for numbers.  
+The design is primarily based on Code Institute’s “Love Maths” tutorial by Anna Greaves. It is true to say that I have used the tutorial as a starting point, however while I was working on it and trying to addapt it to my ideas, I had to introduce extensive changes both to the appearance and the code. I have retained the idea of 4 buttons for different game types and the submit button for checking answers but the whole question area has been remodelled to be textbased with radio buttons used to provide ansers instead of input boxes for numbers.  
 
 ### Design details
 
@@ -102,15 +103,15 @@ The web application, in its entirety, utilizes Google Font “Ubuntu”. The col
 ### Game type buttons
 ![Game type buttons](./assets/images/game-type-buttons.PNG)
 
-The buttons are a one of the key application features as they enable the user to change the type of game questions. The default game type that the aplication offers on loading the web page is "Capitals", however swiching to any of the other three reamining game types requires the user to click a corresponding button.
+The buttons are a one of the key application features as they enable the user to change the game type. The default game type that the aplication offers on loading the web page is "Capitals", however swiching to any of the other three reamining game types requires the user to click a corresponding button. Clicking a button changes the question wording and the set of answers.
 
 ### Question area
 ![Question area](./assets/images/question-and-answer-area.PNG)\
-This area displays a quiz question relevant to the game type with randomly selected country name. Below the question the user is presented with a choice of three answers, one of which is correct. The user makes their selection by clicking a corresponding radio button.
+This area displays a quiz question relevant to the game type with randomly selected country name. Below the question, the user is presented with a choice of three answers, one of which is always correct. The user makes their selection by clicking a corresponding radio button next to the selected answer.
 
 ### Submit button
 ![Submit button](./assets/images/submit-button.PNG)
-Once clicked, the submit button triggers a number of actions. Firstly, the answer is verified. Secondly, depending on whether the answer is correct or not, the user receives an appropriate pop up message and the score is adjusted. Lastly, a new question and answers of the same game type are generated. 
+Once clicked, the submit button triggers a number of actions. Firstly, the answer is verified. Secondly, depending on whether the answer is correct or not, the user receives an appropriate pop up message and the score is adjusted. Lastly, a new question and set of answers for the same game type are randomly generated and the radio button, that has been checked previously, is then unchecked, so that a new choice can be made. 
 
 ### Game score area
 ![Game score area](./assets/images/score-area.PNG)
@@ -118,8 +119,7 @@ This area keeps track of the user's progress by displaying the current number of
 
 ## Implementation and Coding
 
-The entriety of code for the purpose of this project has been in GitPod. The web page structure and content is delivered by means of HTML while visual styling, positioning and responsivnes to diffrent screen sizes is achieved by means of CSS. JavaScript code has been employed to turn the Quiz page into a web based application that responds accordingly to the user's actions. I have aimed to write and space the code in orderly neat manner and provide helpful comments, which is a good practice recommended by Code Institute in their learning tutorials. This applies to both CSS and Javascript files where appropriate class names or function names have been used that hint at their purpose. All of this to enhance the readability of the code to other people who might be reviewing it.
-
+The entriety of the code for this project has been written directly in GitPod. The web page structure and its content is has been delivered by means of HTML while visual styling, positioning and responsivnes to diffrent screen sizes is achieved with CSS. JavaScript code has been employed to turn the Quiz page into a web based application that responds accordingly to the user's actions. I have aimed to write and space the code in orderly neat manner and provide helpful comments, which is a good practice recommended by Code Institute in their learning tutorials. This applies to both CSS and Javascript files where appropriate class names or function names have been used to hint at their purpose. All of this to enhance the readability of the code to other developers who might be reviewing it.
 
 ## Technologies Used
 
@@ -135,7 +135,7 @@ The entriety of code for the purpose of this project has been in GitPod. The web
 * [Jigsaw validation](https://jigsaw.w3.org/) used for CSS validation.
 
 ## Testing
-1. As a new user I can easily gues how it works.
+1. As a new user I can easily gues how the app works.
 * Result: PASSED
   * The application has a straightforward look that resembles standard multipulple choice tests.
 2. The user can easily swich to a different game type.
@@ -159,6 +159,9 @@ The entriety of code for the purpose of this project has been in GitPod. The web
 8. The radio button checked by the user will be unchecked before a new question is generated.
 * Result: PASSED
   * The application does automatically uncheck radio buttons before generating new question.
+9. The application is responsive and adjusts layout to fit desktop, tablet and mobile srceens.
+* Result: PASSED
+  * This feature has been checked in Chrome Web Developer Tools and appears to be working well.
 
 ## Validation
 
@@ -173,18 +176,18 @@ Pasting the code into [W3C CSS Validation Service](https://jigsaw.w3.org/css-val
 ![CSS validation results](./assets/images/css-validation-result.PNG)
 
 ### JavaScript
-I have also attempted to validate the javascript code through [ValidateJavaScript](https://validatejavascript.com). However, this resulted in a long list of errors that do not appear to prevent the code from functioning properly. Similar errors appear to exist in the original "Love Maths" javacript code and, in my belief, they might be the result of Code Institute being more up to date with the new developments in JavaScript or trying to simplify the process of learning.
+I have also attempted to validate the javascript code through [ValidateJavaScript](https://validatejavascript.com). However, this resulted in a long list of errors that do not appear to prevent the code from functioning properly. Similar types of errors appear to exist in the original "Love Maths" javacript code and, in my belief, they might be the result of Code Institute being more up to date with the new developments in JavaScript or trying to simplify the process of learning.
 
 ## Deployment
-After final commit to Git via Gipod, the website has been deployed online at Git Pages through a standard GitHub procedure. Below are the steps taken:\
+After final commit to Git via Gipod, the website has been deployed online at Git Pages through a standard GitHub procedure. Below are the steps taken:
 <br>
 Enter the Github repository “Project Milestone 2” -> Settings -> Pages ->Source-> (branch) Master-> (folder) /root-> Save
 <br>
-The web application is now publicly accessible at this URL address: https://mariuszkaminski.github.io/Milestone-Project-2/
+Upon completion of the above steps, the web application has become publicly accessible at the following URL address: https://mariuszkaminski.github.io/Milestone-Project-2/
  
 ## Evaluation
 
-As stated before, the starting point for this project was Code Institute Love Maths walkthrough, however my own idea of changing the subject of the game from mathematics to geography, simeple as it may have sounded, in the end, proved to be very challenging. Firstly, the code had to be extensively modified to deal with arrays, objects and arrays of objects instead of numbers. Secondly, using radio buttons for selecting text based answers presented its own set of challenges. Also, ensuring that one of the answers is correct and avoiding repetitions required coming up with new functions not included in the original walkthrough. On the more critical note, I realise that more could have been done to improve the visual appeal of the app and the code might be streamlined by the use of arrow functions and ternary operators. On the whole, while the work on the project has been frustrating at times, it has also been a good exercise in problem solving.
+As stated before, the starting point for this project was provided by Code Institute's "Love Maths" walkthrough tutorial, however my own idea of changing the subject of the game from mathematics to geography, simeple as it may have sounded, in the end proved to be very challenging. Firstly, the code had to be extensively modified to deal with arrays, objects and object arrays instead of numbers and arithmetic calculations. Secondly, using radio buttons for selecting text based answers presented its own set of challenges. Also, ensuring that one of the answers is always correct and avoiding repetitions required coming up with a number of new complex functions not included in the original walkthrough. On a more critical note, I realise that more could have been done to improve the visual appeal of the app and the code might be streamlined by the use of arrow functions and ternary operators. That's something that can be improved upon in future iterations of the app. Summing up, the work on the project has been frustrating at times but it has also been a good exercise in problem solving and seeing the whole thing finally working gives a lot of satisfaction.
 
 ## Credits
 
